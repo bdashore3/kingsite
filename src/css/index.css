@@ -1,22 +1,29 @@
+@import 'buttons.css';
+
+html {
+    scroll-behavior: smooth;
+}
 body {
-    background-color: #0e1722;
     animation: fadeInAnimation ease 2s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
 }
-h1 {
-    color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
+.arrow {
+    border: solid whitesmoke;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: 0s;
 }
-p {
-    color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
+.button_container:hover .arrow {
+    border-color: #0e1722;
 }
-@keyframes fadeInAnimation { 
-    0% { 
-        opacity: 0; 
-    } 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
     100% {
-        opacity: 1; 
-    } 
+        opacity: 1;
+    }
 } 

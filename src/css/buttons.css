@@ -1,0 +1,7 @@
+.button_container {
+    transition-duration: 0.4s;
+}
+.button_container:hover {
+    background-color: whitesmoke;
+    color: #0e1722;  
+}
