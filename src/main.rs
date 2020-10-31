@@ -1,5 +1,8 @@
-use rocket::*;
-use rocket::{Request, response::{content::Html, NamedFile, Responder}};
+use rocket::{
+    *,
+    Request,
+    response::{NamedFile, Responder}
+};
 
 #[get("/")]
 async fn index<'a>() -> impl Responder<'a, 'static> {
@@ -9,16 +12,6 @@ async fn index<'a>() -> impl Responder<'a, 'static> {
 #[get("/css/tailwind.css")]
 async fn tailwind<'a>() -> impl Responder<'a, 'static> {
     NamedFile::open("css/tailwind.css").await.ok()
-}
-
-#[get("/css/index.css")]
-async fn index_css<'a>() -> impl Responder<'a, 'static> {
-    NamedFile::open("css/index.css").await.ok()
-}
-
-#[get("/css/buttons.css")]
-async fn buttons_css<'a>() -> impl Responder<'a, 'static> {
-    NamedFile::open("css/buttons.css").await.ok()
 }
 
 #[get("/images/favicon.png")]
@@ -34,6 +27,6 @@ async fn not_found(req: &Request<'_>) -> String {
 #[launch]
 async fn rocket() -> rocket::Rocket {
     rocket::ignite()
-        .mount("/", routes![index, tailwind, index_css, buttons_css, favicon])
+        .mount("/", routes![index, tailwind, favicon])
         .register(catchers![not_found])
 }
