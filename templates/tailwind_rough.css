@@ -40,7 +40,9 @@ body {
     border-color: #0e1722;
 }
 
+.ws-s {
+    word-spacing: 0.5rem;
+}
+
 @tailwind components;
 @tailwind utilities;
-
-

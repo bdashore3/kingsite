@@ -8,8 +8,17 @@ module.exports = {
     extend: {
       colors: {
         whitesmoke: '#f5f5f5',
-        blueblack: '#0e1722'
+        darkbg: '#0f151c',
+        lightbg: '#243242',
       },
+      fontFamily: {
+        header: ['Montserrat', 'Arial'],
+        paragraph: ['Futura', 'Calibri'],
+      },
+      fontSize: {
+        '7xl': '5rem',
+        '8xl': '6rem',
+      }
     },
   },
   variants: {},
