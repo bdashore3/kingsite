@@ -10,6 +10,15 @@ body {
     animation-fill-mode: forwards;
 }
 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .button_container {
     transition-duration: 0.4s;
 }
@@ -19,13 +28,21 @@ body {
     color: #0e1722;  
 }
 
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.list_button:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 5px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: relative;
+    background: whitesmoke;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.list_button:hover:after { 
+    width: 100%; 
+    left: 0; 
 }
 
 .arrow {
@@ -43,6 +60,26 @@ body {
 .ws-s {
     word-spacing: 0.5rem;
 }
+
+.list-inline {
+    list-style: none;
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+	padding: 0;
+}
+
+/*
+.list-inline > li {
+	display: inline-block;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+.list-inline > li:before {
+	content: "\200B";
+	position: absolute;
+}
+*/
 
 @tailwind components;
 @tailwind utilities;

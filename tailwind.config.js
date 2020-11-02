@@ -12,12 +12,15 @@ module.exports = {
         lightbg: '#243242',
       },
       fontFamily: {
-        header: ['Montserrat', 'Arial'],
+        header: ['Montserrat', 'Calibri'],
         paragraph: ['Futura', 'Calibri'],
       },
       fontSize: {
         '7xl': '5rem',
         '8xl': '6rem',
+      },
+      height: {
+        '18': "4.5rem",
       }
     },
   },
