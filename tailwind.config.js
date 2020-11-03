@@ -12,9 +12,9 @@ module.exports = {
         lightbg: '#243242',
         twitch: '#593e85',
         email: '#3b64af',
-        twitter: '#50abf1',
+        twitter: '#1da1f3',
         github: '#2b2727',
-        discord: '#36393f',
+        blurple: '#7289DA',
       },
       fontFamily: {
         header: ['Montserrat', 'Calibri'],

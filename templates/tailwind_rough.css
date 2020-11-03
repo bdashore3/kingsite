@@ -1,97 +1,92 @@
 @tailwind base;
 /* Custom classes here */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    animation: fadeInAnimation ease 2s; 
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .flex-flow-c {
-    flex-flow: column;
+  flex-flow: column;
 }
 
-.button_container {
-    transition-duration: 0.4s;
+.button-container {
+  transition-duration: 0.4s;
 }
-.button_container:hover {
-    background-color: whitesmoke;
-    color: #0e1722;  
-}
-
-.list-button:after {    
-    background: none repeat scroll 0 0 transparent;
-    bottom: 5px;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: relative;
-    background: whitesmoke;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-}
-.list-button:hover:after { 
-    width: 100%; 
-    left: 0; 
-}
-
-.contact-button {
-    display: inline-flex;
-    align-items: center;
-    border-radius: 0.375rem;
-    transition: 0.5s;
-}
-
-.contact-button:hover {
-    transform: scale(1.1,1.1);
+.button-container:hover {
+  background-color: whitesmoke;
+  color: #0e1722;
 }
 
 .arrow {
-    border: solid whitesmoke;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    transition: 0s;
+  border: solid whitesmoke;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  transition: 0s;
+}
+.button-container:hover .arrow {
+  border-color: #0e1722;
+}
+
+.list-button:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 5px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  background: whitesmoke;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.list-button:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.contact-button {
+  color: #f5f5f5;
+  fill: currentColor;
+  width: 4rem;
+  height: 4rem;
+  transition-duration: 0.3s;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
+  display: grid;
 }
-
 .grid-item {
-    font-size: 30px;
-    text-align: center;
-}
-
-.button_container:hover .arrow {
-    border-color: #0e1722;
+  font-size: 30px;
+  text-align: center;
+  border: 1px solid whitesmoke;
 }
 
 .spacing-s {
-    border-spacing: 0 3rem;
+  border-spacing: 0 3rem;
 }
 
 .spacing-m {
-    border-spacing: 0 5rem;
+  border-spacing: 0 5rem;
 }
 
 .ws-s {
-    word-spacing: 0.5rem;
+  word-spacing: 0.5rem;
 }
 
 @tailwind components;
