@@ -8,7 +8,7 @@
 </head>
 
 <body class="m-0 p-0 h-full w-full bg-darkbg">
-    <div id="bio" class="inline-block h-full w-full">
+    <div id="home" class="inline-block h-full w-full">
         <div class="flex h-full w-full items-center text-center justify-items-center sticky">
             <div class="w-full table-cell align-middle text-center">
                 <p class="relative text-whitesmoke text-6xl font-bold tracking-wide">
@@ -27,35 +27,36 @@
         </div>
     </div>
     <div>
-        <nav class="sticky top-0 bg-lightbg z-10">
+        <nav class="sticky top-0 bg-lightbg z-10 shadow-drop">
             <ul class="flex mx-32 items-center text-whitesmoke list-none justify-between font-paragraph text-4xl">
                 <li>
-                    <a href="#about" class="list_button text-center font-paragraph text-whitesmoke relative">
+                    <a href="#about" class="list-button text-center font-paragraph text-whitesmoke relative">
                         About Me
                     </a>
                 </li>
                 <li>
-                    <a href="#work" class="list_button text-center font-paragraph text-whitesmoke relative">
+                    <a href="#work" class="list-button text-center font-paragraph text-whitesmoke relative">
                         My Work
                     </a>
                 </li>
                 <li>
-                    <a href="#bio">
+                    <a href="#home">
                         <img src="images/favicon.png" href="#bio" width="75px" height="75px">
                     </a>
                 </li>
                 <li>
-                    <a href="#contact" class="list_button text-center font-paragraph relative">Contact</a>
+                    <button class="list-button text-center font-paragraph relative">Docs</button>
                 </li>
                 <li>
-                    <button class="list_button text-center font-paragraph relative">Configuration</button>
+                    <button class="list-button text-center font-paragraph relative">Configuration</button>
                 </li>
             </ul>
         </nav>
-        <div id="about" class="relative w-full h-18"></div>
-        <div class="inline-block overflow-visible max-w-full w-screen min-h-screen">
-            <h1 class="text-yellow-500 text-center text-7xl font-header tracking-wide font-thin p-3">Who am I?</h1>
-            <div class="inline-block items-center text-center justify-items-center mx-24 rounded-3xl relative bg-lightbg">
+        <div class="flex flex-flow-c min-h-screen">
+        <div id="about" class="h-18"></div>
+        <div class="flex-grow overflow-visible">
+            <h1 class="text-yellow-500 text-center text-6xl font-header tracking-wide font-thin p-3">Who am I?</h1>
+            <div class="inline-block items-center justify-items-center mx-24 rounded-3xl relative bg-lightbg">
                 <p class="text-whitesmoke text-xl p-6 font-paragraph tracking-wide">
                     My name is Brian Dashore, a self-taught hobbyist developer, and I am studying for a degree in medicine.
                     I am currently located in Long Island, New York.
@@ -101,19 +102,76 @@
                 </p>
             </div>
         </div>
-        <div id="work" class="relative w-full h-18"></div>
-        <div class="inline-block max-w-full w-screen min-h-screen">
-            <h1 class="text-yellow-500 text-center text-7xl font-header tracking-wide font-thin p-3">My Work</h1>
+        </div>
+        <div class="flex flex-flow-c min-h-screen">
+        <div id="work" class="h-18"></div>
+        <div class="flex-grow">
+            <h1 class="text-yellow-500 text-center text-6xl font-header tracking-wide font-thin p-3">My Work</h1>
             <div class="inline-block items-center text-center justify-items-center mx-24 rounded-3xl relative bg-lightbg">
                 
             </div>
         </div>
-        <div id="contact" class="relative w-full h-18 border-solid"></div>
-        <div class="inline-block max-w-full w-screen h-screen">
-            <h1 class="text-yellow-500 text-center text-7xl font-header tracking-wide font-thin p-3">Contact me!</h1>
-            <div class="inline-block items-center text-center justify-items-center mx-24 rounded-3xl relative bg-lightbg">
-
+        </div>
+                    <!--
+        <div class="flex outer min-h-screen">
+        <div id="contact" class="h-18"></div>
+        <div class="flex-grow inline-flex outer border-solid border-2 border-pink-500">
+            <h1 class="text-yellow-500 text-center font-header text-6xl tracking-wide font-thin px-3 mt-3">Contact me!</h1>
+            <div class="inline-flex flex-grow items-center justify-items-center">
+            <div class="grid-container gap-32 px-20 w-full z-0 border-solid border-2 border-green-500">
+                <div class="grid-item">
+                    <a href="mailto:bdashore3@gmail.com" target="_blank">
+                        <button class="contact-button bg-email">
+                            <img src="images/Email.png" class="float-left" height="50px" width="50px">
+                            <p class="ml-1 font-paragraph text-5xl text-whitesmoke">Email</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://github.com/bdashore3" target="_blank">
+                        <button class="contact-button bg-github">
+                            <img src="images/GitHub.png" class="float-left" height="50px" width="50px">
+                            <p class="ml-3 font-paragraph text-5xl text-whitesmoke">Github</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://twitter.com/kingbri1st" target="_blank">
+                        <button class="contact-button bg-twitter">
+                            <img src="images/Twitter.png" class="float-left" height="70px" width="70px">
+                            <p class="ml-3 font-paragraph text-5xl text-whitesmoke mb-1">Twitter</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://discord.gg/pswt7by" target="_blank">
+                        <button class="contact-button bg-discord">
+                            <img src="images/Discord.png" class="float-left" height="50px" width="50px">
+                            <p class="ml-2 font-paragraph text-5xl text-whitesmoke">Discord</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://twitch.tv/kingbrigames" target="_blank">
+                        <button class="contact-button bg-twitch">
+                            <img src="images/Twitch.jpg" class="float-left" height="50px" width="50px">
+                            <p class="ml-3 font-paragraph text-5xl text-whitesmoke">Twitch</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/channel/UCuGB6NqD6HJlXiGGxpVqxhw" target="_blank">
+                        <button class="contact-button bg-whitesmoke">
+                            <img src="images/Youtube.png" class="float-left" height="50px" width="50px">
+                            <p class="ml-3 font-paragraph text-5xl">YouTube</p>
+                        </button>
+                    </a>
+                </div>
             </div>
+            </div>
+            -->
+        </div>
+        </div>
         </div>
     </div>
 </body>
