@@ -18,9 +18,9 @@ async fn test_css<'a>() -> impl Responder<'a, 'static> {
     NamedFile::open("css/test.css").await.ok()
 }
 
-#[get("/favicon.png")]
+#[get("/favicon.svg")]
 async fn favicon<'a>() -> impl Responder<'a, 'static> {
-    NamedFile::open("images/favicon.png").await.ok()
+    NamedFile::open("images/favicon.svg").await.ok()
 }
 
 #[catch(404)]
