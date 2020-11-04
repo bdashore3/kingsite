@@ -7,33 +7,8 @@
   </head>
 
   <body class="m-0 p-0 h-full w-full bg-darkbg">
-    <div id="home" class="inline-block h-full w-full">
-      <div
-        class="flex h-full w-full items-center text-center justify-items-center sticky"
-      >
-        <div class="w-full table-cell align-middle text-center">
-          <p class="relative text-whitesmoke text-6xl font-bold tracking-wide">
-            <b>Brian Dashore</b>
-          </p>
-          <p class="relative xl:mt-8 text-whitesmoke text-2xl">
-            Future doctor. Hobbyist developer. Content Creator. Reinventing the
-            wheel.
-          </p>
-        </div>
-      </div>
-      <div
-        class="flex w-full justify-center absolute bottom-0 p-12 text-center"
-      >
-        <a
-          href="#about"
-          class="button-container rounded-full w-12 h-12 border-solid border-2 border-whitesmoke"
-        >
-          <div class="arrow down m-auto w-2 h-2 relative mt-4"></div>
-        </a>
-      </div>
-    </div>
     <div>
-      <nav class="sticky top-0 bg-lightbg z-10 shadow-drop">
+      <nav class="fixed w-full top-0 bg-lightbg z-10 shadow-drop">
         <ul
           class="flex mx-32 justify-items-center items-center text-whitesmoke list-none justify-between font-paragraph text-4xl"
         >
@@ -75,6 +50,33 @@
           </li>
         </ul>
       </nav>
+      <div
+        id="home"
+        class="flex flex-flow-c min-h-screen items-center justify-center"
+      >
+        <div class="text-center">
+          <p class="text-whitesmoke text-6xl font-bold tracking-wide">
+            <b>Brian Dashore</b>
+          </p>
+          <p class="mt-8 text-whitesmoke text-2xl">
+            Future doctor. Hobbyist developer. Content Creator. Reinventing the
+            wheel.
+          </p>
+        </div>
+        <div
+          class="flex w-full justify-center absolute bottom-0 p-12 text-center"
+        >
+          <a
+            href="#about"
+            class="button-container rounded-full w-12 h-12 border-solid border-2 border-whitesmoke"
+          >
+            <div class="arrow down m-auto w-2 h-2 relative mt-4"></div>
+          </a>
+        </div>
+      </div>
+      <!--
+
+    -->
       <div class="flex flex-flow-c min-h-screen">
         <div id="about" class="h-18"></div>
         <div class="flex-grow overflow-visible">
