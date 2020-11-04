@@ -4,3 +4,10 @@ port = 8000
 keep_alive = 5
 log = "normal"
 limits = { forms = 32768 }
+
+[production]
+address = "127.0.0.1"
+port = 8000
+keep_alive = 5
+log = "critical"
+limits = { forms = 32768 }
