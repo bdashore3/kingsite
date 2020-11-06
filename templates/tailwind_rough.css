@@ -70,11 +70,14 @@ body {
 
 .grid-container {
   display: grid;
+  grid-template-columns: auto auto auto;
 }
+
 .grid-item {
+  background-color: #243242;
   font-size: 30px;
   text-align: center;
-  border: 1px solid whitesmoke;
+  color: whitesmoke;
 }
 
 .spacing-s {

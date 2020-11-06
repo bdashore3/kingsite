@@ -4,30 +4,34 @@
     <link rel="icon" type="image/png" href="images/favicon.svg" />
     <title>Kingbri's website</title>
     <link rel="stylesheet" href="css/tailwind.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="m-0 p-0 h-full w-full bg-darkbg">
-    <nav class="fixed w-full top-0 bg-lightbg z-10 shadow-drop">
+    <nav class="fixed w-full top-0 bg-lightbg z-10 shadow-drop px-40">
       <ul
-        class="flex mx-32 justify-items-center items-center text-whitesmoke list-none justify-between font-paragraph text-4xl"
+        class="grid grid-cols-5 mx-16 justify-items-center items-center text-whitesmoke list-none justify-between font-paragraph text-3xl"
       >
-        <li>
+        <li class="grid-item">
           <a
             href="#about"
-            class="list-button text-center font-paragraph text-whitesmoke relative"
+            class="list-button text-center font-paragraph text-whitesmoke relative text-3xl"
           >
             About Me
           </a>
         </li>
-        <li>
+        <li class="grid-item ml-2">
           <a
             href="#work"
-            class="list-button text-center font-paragraph text-whitesmoke relative"
+            class="list-button text-center font-paragraph text-whitesmoke relative text-3xl"
           >
             My Work
           </a>
         </li>
-        <li>
+        <li class="grid-item">
           <a href="#home">
             <img
               src="images/favicon.svg"
@@ -37,13 +41,17 @@
             />
           </a>
         </li>
-        <li>
-          <button class="list-button text-center font-paragraph relative">
-            Docs
+        <li class="grid-item mr-8">
+          <button
+            class="list-button text-center font-paragraph relative text-3xl"
+          >
+            Resources
           </button>
         </li>
-        <li>
-          <button class="list-button text-center font-paragraph relative">
+        <li class="grid-item">
+          <button
+            class="list-button text-center font-paragraph relative text-3xl"
+          >
             Configuration
           </button>
         </li>
@@ -73,21 +81,23 @@
         </a>
       </div>
     </div>
-    <!--
-
-    -->
     <div class="flex flex-flow-c min-h-screen">
       <div id="about" class="h-18"></div>
-      <div class="flex-grow overflow-visible">
+      <div
+        class="flex-grow inline-flex flex-flow-c overflow-visible items-center justify-center"
+      >
         <h1
-          class="text-yellow-500 text-center text-6xl font-header tracking-wide font-thin p-3"
+          class="text-yellow-500 text-center text-6xl font-header font-semibold tracking-wide p-3"
         >
           Who am I?
         </h1>
         <div
-          class="inline-block items-center justify-items-center mx-24 rounded-3xl relative bg-lightbg"
+          class="px-10 xl:mx-48 rounded-3xl relative bg-lightbg font-medium"
+          style="max-width: 85rem"
         >
-          <p class="text-whitesmoke text-xl p-6 font-paragraph tracking-wide">
+          <p
+            class="text-whitesmoke text-xl p-6 font-paragraph tracking-wide font-light"
+          >
             My name is Brian Dashore, a self-taught hobbyist developer, and I am
             studying for a degree in medicine. I am currently located in Long
             Island, New York.
@@ -145,20 +155,115 @@
     </div>
     <div class="flex flex-flow-c min-h-screen">
       <div id="work" class="h-18"></div>
-      <div class="flex-grow">
+      <div class="inline-flex flex-flow-c flex-grow overflow-visible">
         <h1
-          class="text-yellow-500 text-center text-6xl font-header tracking-wide font-thin p-3"
+          class="text-yellow-500 text-center text-6xl font-header font-semibold tracking-wide p-3"
         >
           My Work
         </h1>
-        <div
-          class="inline-block items-center text-center justify-items-center mx-24 rounded-3xl relative bg-whitesmoke"
-        ></div>
-      </div>
+        <!--
+        <div class="inline-flex flex-grow items-center justify-items-center">
+          <div class="grid-container gap-20 w-full px-32">
+            <div class="grid-item p-5">
+              <h1 class="underline">RoyalGuard</h1>
+              <p class="text-xl font-paragraph">
+                Make your discord administration experience simple and easy.
+              </p>
+              <a href="https://github.com/bdashore3/RoyalGuard" target="_blank">
+                <button
+                  class="text-lg px-3 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke"
+                >
+                  View source code
+                </button>
+              </a>
+            </div>
+            <div class="grid-item p-5">
+              <h1 class="underline">CourtJester</h1>
+              <p class="text-xl font-paragraph">
+                A multipurpose bot which enhances your discord server
+                experience.
+              </p>
+              <a
+                href="https://github.com/bdashore3/CourtJester"
+                target="_blank"
+              >
+                <button
+                  class="text-lg px-3 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke"
+                >
+                  View source code
+                </button>
+              </a>
+            </div>
+            <div class="grid-item p-5">
+              <h1 class="underline">Simple Retweets</h1>
+              <p class="text-xl font-paragraph">
+                A bot that retweets mentioned posts on a configured account.
+              </p>
+              <a
+                href="https://github.com/bdashore3/Simple-Retweets"
+                target="_blank"
+              >
+                <button
+                  class="text-lg px-3 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke"
+                >
+                  View source code
+                </button>
+              </a>
+            </div>
+            <div class="grid-item p-5">
+              <h1 class="underline">KingBot-Twitch</h1>
+              <p class="text-xl font-paragraph">
+                My personal bot for Twitch. Is currently being rewritten in
+                Rust.
+              </p>
+              <a href="https://github.com/bdashore3/KingBot" target="_blank">
+                <button
+                  class="text-lg px-3 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke"
+                >
+                  View source code
+                </button>
+              </a>
+            </div>
+            <div class="grid-item p-5">
+              <h1 class="underline">KingKernel</h1>
+              <p class="text-xl font-paragraph">
+                A custom kernel for the pixel 1/pixel 1 XL. Currently
+                discontinued, but downloadable.
+              </p>
+              <a href="https://github.com/King-Kernel/" target="_blank">
+                <button
+                  class="text-lg px-3 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke"
+                >
+                  View source code
+                </button>
+              </a>
+            </div>
+            <div class="grid-item p-5">
+              <h1 class="underline">TypeMap Revitalized</h1>
+              <p class="text-xl font-paragraph">
+                A hashmap, but uses types as keys. You can put anything in
+                there! (Collaboration with serenity-rs).
+              </p>
+              <a
+                href="https://github.com/bdashore3/typemap_rev"
+                target="_blank"
+              >
+                <button
+                  class="text-lg px-3 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke"
+                >
+                  View source code
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      --></div>
     </div>
     <footer id="contact" class="flex justify-center p-8">
       <div class="flex flex-flow-c justify-center">
-        <h1 class="text-yellow-500 text-4xl text-center font-header">
+        <h1
+          class="text-yellow-500 text-4xl text-center font-header font-semibold"
+        >
           Social Links
         </h1>
         <ul class="py-10 flex items-center">
@@ -261,66 +366,5 @@
         </ul>
       </div>
     </footer>
-    <!--
-        <div class="flex flex-flow-c min-h-screen">
-        <div id="contact" class="h-18"></div>
-        <div class="flex-grow inline-flex flex-flow-c border-solid border-2 border-pink-500">
-            <h1 class="text-yellow-500 text-center font-header text-6xl tracking-wide font-thin px-3 mt-3">Contact me!</h1>
-            <div class="inline-flex flex-grow items-center justify-items-center">
-            <div class="grid-container row-gap-3 px-48 w-full z-0 border-solid border-2 border-green-500">
-                <div class="grid-item bg-email">
-                    <a href="mailto:bdashore3@gmail.com" target="_blank">
-                        <button class="contact-button bg-blue-500">
-                            <img src="images/Email.png" class="float-left" height="50px" width="50px">
-                            <p class="ml-1 font-paragraph text-5xl text-whitesmoke">Email</p>
-                        </button>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://github.com/bdashore3" target="_blank">
-                        <button class="contact-button bg-github">
-                            <img src="images/GitHub.png" class="float-left" height="50px" width="50px">
-                            <p class="ml-3 font-paragraph text-5xl text-whitesmoke">Github</p>
-                        </button>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://twitter.com/kingbri1st" target="_blank">
-                        <button class="contact-button bg-twitter">
-                            <img src="images/Twitter.png" class="float-left" height="70px" width="70px">
-                            <p class="ml-3 font-paragraph text-5xl text-whitesmoke mb-1">Twitter</p>
-                        </button>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://discord.gg/pswt7by" target="_blank">
-                        <button class="contact-button bg-discord">
-                            <img src="images/Discord.png" class="float-left" height="50px" width="50px">
-                            <p class="ml-2 font-paragraph text-5xl text-whitesmoke">Discord</p>
-                        </button>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://twitch.tv/kingbrigames" target="_blank">
-                        <button class="contact-button bg-twitch">
-                            <img src="images/Twitch.jpg" class="float-left" height="50px" width="50px">
-                            <p class="ml-3 font-paragraph text-5xl text-whitesmoke">Twitch</p>
-                        </button>
-                    </a>
-                </div>
-                <div class="grid-item">
-                    <a href="https://www.youtube.com/channel/UCuGB6NqD6HJlXiGGxpVqxhw" target="_blank">
-                        <button class="contact-button bg-whitesmoke">
-                            <img src="images/Youtube.png" class="float-left" height="50px" width="50px">
-                            <p class="ml-3 font-paragraph text-5xl">YouTube</p>
-                        </button>
-                    </a>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-        </div>
-        -->
   </body>
 </html>
