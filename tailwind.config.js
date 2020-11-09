@@ -18,7 +18,8 @@ module.exports = {
       },
       fontFamily: {
         header: ['Montserrat', 'Calibri'],
-        paragraph: ['Raleway', 'Calibri'],
+        navigation: ['Raleway', 'Calibri'],
+        paragraph: ['Open Sans', 'Calibri'],
       },
       fontSize: {
         '7xl': '5rem',
