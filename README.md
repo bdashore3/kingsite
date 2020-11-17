@@ -1,10 +1,10 @@
 # My Website!
 
-This is the source for my personal website [kingbri.me](kingbri.me).
+This is the source for my personal website [kingbri.me](https://kingbri.me).
 
-Please do not reuse this without my permission.
+## License
 
-This project is licensed under MPL2.
+This is for educational purposes only! Please do not reuse this repository without my permission.
 
 ## What does it use?
 
@@ -16,7 +16,7 @@ This project is licensed under MPL2.
 
 ## Why is this not on Github Pages?
 
-I will be adding many sub-pages to this website which will serve as internal/configuration panels for various projects. Therefore, hosting this website on pages is a huge pain. 
+I will be adding many sub-pages to this website which will serve as internal/configuration panels for various projects. Therefore, hosting this website on pages is a huge pain.
 
 This is also why I am using Rocket instead of directly serving the HTML.
 
