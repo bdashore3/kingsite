@@ -31,6 +31,9 @@ module.exports = {
       boxShadow: {
         drop: '0 0px 10px 8px #0f151c',
       },
+      inset: {
+        '4': '1rem',
+      },
     },
   },
   variants: {},

@@ -71,12 +71,14 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
+  grid-template-rows: 19rem 19rem;
 }
 
 .grid-item {
+  border-radius: 0.5rem;
   background-color: #243242;
-  text-align: center;
   color: whitesmoke;
+  position: relative;
 }
 
 .spacing-s {
