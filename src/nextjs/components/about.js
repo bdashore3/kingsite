@@ -13,7 +13,7 @@ export default function About() {
             <div
                 className="px-10 xl:mx-48 rounded-3xl relative bg-lightbg font-medium max-w-7xl"
             >
-            <p className="text-whitesmoke text-xl p-6 font-paragraph tracking-wide leading-relaxed">
+            <p className="text-whitesmoke text-xl p-6 font-paragraph tracking-wide leading-normal">
                 My name is Brian Dashore, a self-taught hobbyist developer, and I am
                 studying for a degree in medicine. I am currently located in Long
                 Island, New York.
