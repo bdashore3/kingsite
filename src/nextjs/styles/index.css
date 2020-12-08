@@ -1,0 +1,98 @@
+@tailwind base;
+/* Custom classes here */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background-color: #0f151c;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flex-flow-c {
+  flex-flow: column;
+}
+
+.button-container {
+  transition-duration: 0.4s;
+}
+.button-container:hover {
+  background-color: whitesmoke;
+  color: #0e1722;
+}
+
+.arrow {
+  border: solid whitesmoke;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  transition: 0s;
+}
+.button-container:hover .arrow {
+  border-color: #0e1722;
+}
+
+.list-button:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 5px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: relative;
+  background: whitesmoke;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.list-button:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.contact-button {
+  color: #f5f5f5;
+  fill: currentColor;
+  width: 4rem;
+  height: 4rem;
+  transition-duration: 0.3s;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 19rem 19rem;
+}
+
+.grid-item {
+  border-radius: 0.5rem;
+  background-color: #243242;
+  color: whitesmoke;
+  position: relative;
+}
+
+.spacing-s {
+  border-spacing: 0 3rem;
+}
+
+.spacing-m {
+  border-spacing: 0 5rem;
+}
+
+.ws-s {
+  word-spacing: 0.5rem;
+}
+
+@tailwind components;
+@tailwind utilities;

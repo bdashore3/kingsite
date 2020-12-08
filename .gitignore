@@ -1,4 +1,5 @@
 /target
-.vscode/*
+.vscode/
 node_modules/
-src/css/tailwind.css
+src/html/
+src/nextjs/.next/

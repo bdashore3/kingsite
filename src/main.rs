@@ -2,20 +2,11 @@ use rocket::{
     response::{NamedFile, Responder},
     Request, *,
 };
+use rocket_contrib::serve::StaticFiles;
 
 #[get("/")]
 async fn index<'a>() -> impl Responder<'a, 'static> {
     NamedFile::open("html/index.html").await.ok()
-}
-
-#[get("/tailwind.css")]
-async fn tailwind<'a>() -> impl Responder<'a, 'static> {
-    NamedFile::open("css/tailwind.css").await.ok()
-}
-
-#[get("/test.css")]
-async fn test_css<'a>() -> impl Responder<'a, 'static> {
-    NamedFile::open("css/test.css").await.ok()
 }
 
 #[get("/favicon.svg")]
@@ -31,8 +22,8 @@ async fn not_found(req: &Request<'_>) -> String {
 #[launch]
 async fn rocket() -> rocket::Rocket {
     rocket::ignite()
+        .mount("/_next", StaticFiles::from("html/_next"))
         .mount("/", routes![index])
-        .mount("/css", routes![tailwind, test_css])
         .mount("/images", routes![favicon])
         .register(catchers![not_found])
 }
