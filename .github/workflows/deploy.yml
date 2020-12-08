@@ -2,9 +2,7 @@ name: Build and deploy
 
 on:
   push:
-    branches: [nextjs]
-  pull_request:
-    branches: [nextjs]
+    branches: [default]
 
 env:
   CARGO_TERM_COLOR: always
