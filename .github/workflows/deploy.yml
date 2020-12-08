@@ -2,9 +2,9 @@ name: Build and deploy
 
 on:
   push:
-    branches: [default]
+    branches: [nextjs]
   pull_request:
-    branches: [default]
+    branches: [nextjs]
 
 env:
   CARGO_TERM_COLOR: always
@@ -17,14 +17,15 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2.1.2
         with:
-          node-version: 10.x
+          node-version: 12.x
       - name: Set node env
         run: |
           npm config set prefix ~/.npm-global
           export PATH=~/.npm-global/bin:$PATH
           source ~/.profile
-          npm install -g postcss-cli
-          npm install
+          npm install -g yarn
+          cd src/nextjs
+          yarn install
       - name: Cache Deps
         uses: actions/cache@v2
         with:
@@ -34,17 +35,21 @@ jobs:
             ~/.npm
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-      - name: Build Tailwind
-        run: npm run tailbuild
-      - name: Build
-        run: cargo build --release --verbose
+      - name: Export next website
+        run: |
+          cd src/nextjs
+          yarn run export
+      - name: Build rust backend
+        run: |
+          ls
+          cargo build --verbose
       - name: Run tests
         run: cargo test --verbose
       - name: Zip files
         run: |
-          zip kingsite.zip target/release/website -j
+          zip kingsite.zip target/debug/website -j
           cd src
-          zip -r -u ../kingsite.zip html images css
+          zip -r -u ../kingsite.zip html images
           cd ../
       - name: Push zip to server
         uses: appleboy/scp-action@master
