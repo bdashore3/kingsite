@@ -33,22 +33,8 @@ jobs:
             ~/.npm
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-      - name: Export next website
-        run: |
-          cd src/nextjs
-          yarn run export
-      - name: Build rust backend
-        run: |
-          ls
-          cargo build --verbose
-      - name: Run tests
-        run: cargo test --verbose
-      - name: Zip files
-        run: |
-          zip kingsite.zip target/debug/website -j
-          cd src
-          zip -r -u ../kingsite.zip html images
-          cd ../
+      - name: Run Makefile
+        run: make rust_build
       - name: Push zip to server
         uses: appleboy/scp-action@master
         with:

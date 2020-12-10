@@ -12,7 +12,7 @@ export default function Nav() {
             About Me
           </a>
         </li>
-        <li className="grid-item ml-2">
+        <li className="grid-item">
           <a
             href="#work"
             className="list-button text-center relative tracking-wide"
@@ -31,10 +31,13 @@ export default function Nav() {
             />
           </a>
         </li>
-        <li className="grid-item mr-8 font-bold">
-          <button className="list-button text-center relative tracking-wide">
+        <li className="grid-item">
+          <a
+            href="https://files.kingbri.me"
+            className="list-button text-center relative tracking-wide"
+          >
             Resources
-          </button>
+          </a>
         </li>
         <li className="grid-item">
           <button className="list-button text-center relative tracking-wide">
