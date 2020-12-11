@@ -1,30 +1,49 @@
-import Link from 'next/link'
-
-const links = [
-  { href: 'https://github.com/vercel/next.js', label: 'GitHub' },
-  { href: 'https://nextjs.org/docs', label: 'Docs' },
-]
-
 export default function Nav() {
   return (
-    <nav>
-      <ul className="flex items-center justify-between p-8">
-        <li>
-          <Link href="/">
-            <a className="text-blue-500 no-underline text-accent-1 dark:text-blue-300">
-              Home
-            </a>
-          </Link>
+    <nav className="fixed w-full top-0 bg-lightbg z-10 shadow-drop px-40">
+      <ul
+        className="grid grid-cols-5 mx-20 justify-items-center items-center text-whitesmoke list-none justify-between font-navigation text-2xl"
+      >
+        <li className="grid-item">
+          <a
+            href="#about"
+            className="list-button text-center relative tracking-wide"
+          >
+            About Me
+          </a>
         </li>
-        <ul className="flex items-center justify-between space-x-4">
-          {links.map(({ href, label }) => (
-            <li key={`${href}${label}`}>
-              <a href={href} className="no-underline btn-blue">
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <li className="grid-item">
+          <a
+            href="#work"
+            className="list-button text-center relative tracking-wide"
+          >
+            My Work
+          </a>
+        </li>
+        <li className="grid-item">
+          <a href="#home">
+            <img
+              src="/favicon.svg"
+              type="image/svg"
+              href="#home"
+              width="75px"
+              height="75px"
+            />
+          </a>
+        </li>
+        <li className="grid-item">
+          <a
+            href="https://files.kingbri.me"
+            className="list-button text-center relative tracking-wide"
+          >
+            Resources
+          </a>
+        </li>
+        <li className="grid-item">
+          <button className="list-button text-center relative tracking-wide">
+            Configuration
+          </button>
+        </li>
       </ul>
     </nav>
   )
