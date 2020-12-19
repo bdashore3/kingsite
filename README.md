@@ -2,6 +2,8 @@
 
 This is the source for my personal website [kingbri.me](https://kingbri.me).
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1f44dfa4-6212-4b6e-9d6e-2c4e8ba083e0/deploy-status)](https://app.netlify.com/sites/eager-borg-3a4442/deploys)
+
 ## License
 
 This is for educational purposes only! Please do not reuse this repository without my permission.
