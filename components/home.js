@@ -1,3 +1,5 @@
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 export default function Home() {
     return(
         <div
@@ -16,12 +18,12 @@ export default function Home() {
         <div
           className="flex w-full justify-center absolute bottom-0 p-12 text-center"
         >
-          <a
+          <AnchorLink
             href="#about"
             className="button-container rounded-full w-12 h-12 border-solid border-2 border-whitesmoke"
           >
             <div className="arrow down m-auto w-2 h-2 relative mt-4"></div>
-          </a>
+          </AnchorLink>
         </div>
       </div>
     )
