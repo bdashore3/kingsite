@@ -5,7 +5,7 @@ function SocialButton(props) {
       <a href={props.url} target="_blank">
         <svg
           viewBox="0 0 24 24"
-          className={"contact-button hover:" + props.color}
+          className={`contact-button ${props.color}`}
         >
           <path
             d={props.svgPath}
@@ -28,12 +28,12 @@ export default function Socials() {
         <ul className="py-10 flex items-center">
           <SocialButton
             url="mailto:bdashore3@gmail.com"
-            color="text-green-400"
+            color="hover:text-green-400"
             svgPath="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
           />
           <SocialButton
             url="https://github.com/bdashore3"
-            color="text-orange-400"
+            color="hover:text-orange-400"
             svgPath="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 
             9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 
             6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 
@@ -44,7 +44,7 @@ export default function Socials() {
           />
           <SocialButton
             url="https://twitter.com/kingbri1st"
-            color="text-twitter"
+            color="hover:text-twitter"
             svgPath="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4
             11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75
             4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 
@@ -53,7 +53,7 @@ export default function Socials() {
           />
           <SocialButton
             url="https://discord.gg/pswt7by"
-            color="text-blurple"
+            color="hover:text-blurple"
             svgPath="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 
             7.44,7.95 7.44,7.95C8.47,7.03 10.27,6.5 10.27,6.5L10.1,6.33C8.41,6.36 6.88,7.53 6.88,7.53C5.16,11.12 5.27,14.22 5.27,14.22C6.67,16.03 
             8.75,15.9 8.75,15.9L9.46,15C8.21,14.73 7.42,13.62 7.42,13.62C7.42,13.62 9.3,14.9 12,14.9C14.7,14.9 16.58,13.62 16.58,13.62C16.58,13.62 
@@ -64,13 +64,13 @@ export default function Socials() {
           />
           <SocialButton
             url="https://twitch.tv/kingbrigames"
-            color="text-purple-600"
+            color="hover:text-purple-600"
             svgPath="M11.64 5.93H13.07V10.21H11.64M15.57 5.93H17V10.21H15.57M7 2L3.43 5.57V18.43H7.71V22L11.29 18.43H14.14L20.57 12V2M19.14 11.29L16.29
             14.14H13.43L10.93 16.64V14.14H7.71V3.43H19.14Z"
           />
           <SocialButton
             url="https://www.youtube.com/channel/UCuGB6NqD6HJlXiGGxpVqxhw"
-            color="text-red-600"
+            color="hover:text-red-600"
             svgPath="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 
             21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 
             5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 
