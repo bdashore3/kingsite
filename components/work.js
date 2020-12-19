@@ -1,3 +1,4 @@
+// TODO: Use masonry and rework how each Work card is displayed/styled
 export default function Work() {
     return(
         <div className="flex flex-flow-c min-h-screen">
