@@ -1,8 +1,8 @@
-import Nav from '../components/nav';
-import Home from '../components/home';
-import About from '../components/about';
-import Work from '../components/work';
-import Socials from '../components/socials';
+import Nav from '../components/nav.jsx';
+import Home from '../components/home.jsx';
+import About from '../components/about.jsx';
+import Work from '../components/work.jsx';
+import Socials from '../components/socials.jsx';
 
 import Head from 'next/head';
 
