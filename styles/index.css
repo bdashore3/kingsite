@@ -76,10 +76,19 @@ body {
 }
 
 .grid-item {
+  display: flex;
+  flex-direction: column;
   border-radius: 0.5rem;
   background-color: #243242;
   color: whitesmoke;
+  width: 32rem;
+  height: 19rem;
   position: relative;
+  margin-bottom: 4rem;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .spacing-s {
