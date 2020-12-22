@@ -32,9 +32,9 @@ function WorkCard(props) {
 
 export default function Work() {
   return(
-    <div className="flex flex-flow-c min-h-screen">
+    <div className="flex flex-col min-h-screen">
     <div id="work" className="h-18"></div>
-    <div className="inline-flex flex-flow-c flex-grow overflow-visible">
+    <div className="inline-flex flex-col flex-grow overflow-visible">
       <h1
         className="text-yellow-300 text-center text-6xl font-header font-semibold tracking-wide p-3"
       >

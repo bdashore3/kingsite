@@ -19,7 +19,7 @@ function SocialButton(props) {
 export default function Socials() {
   return(
     <footer id="contact" className="flex justify-center p-8">
-      <div className="flex flex-flow-c justify-center">
+      <div className="flex flex-col justify-center">
         <h1
           className="text-yellow-300 text-4xl text-center font-header font-semibold"
         >

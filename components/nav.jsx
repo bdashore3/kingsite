@@ -25,7 +25,7 @@ function NavElement(props) {
   }
 
   return (
-    <li className="grid-item">
+    <li>
       {link}
     </li>
   )
@@ -40,7 +40,7 @@ export default function Nav() {
       >
         <NavElement name="About Me" url="#about" />
         <NavElement name="My Work" url="#work" />
-        <li className="grid-item">
+        <li>
           <AnchorLink href="#home">
             <img
               src="/favicon.svg"
@@ -52,7 +52,7 @@ export default function Nav() {
           </AnchorLink>
         </li>
         <NavElement name="Resources" url="https://files.kingbri.me" />
-        <li className="grid-item">
+        <li>
           <button className="list-button text-center relative tracking-wide">
             Configuration
           </button>

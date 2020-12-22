@@ -1,9 +1,9 @@
 export default function About() {
     return(
-        <div className="flex flex-flow-c min-h-screen">
+        <div className="flex flex-col min-h-screen">
             <div id="about" className="h-18"></div>
             <div
-                className="flex-grow inline-flex flex-flow-c overflow-visible items-center justify-center"
+                className="flex-grow inline-flex flex-col overflow-visible items-center justify-center"
             >
             <h1
                 className="text-yellow-300 text-center text-6xl font-header font-semibold tracking-wide p-3"

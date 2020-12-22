@@ -4,7 +4,7 @@ export default function Home() {
     return(
         <div
         	id="home"
-            className="flex flex-flow-c min-h-screen items-center justify-center tracking-wide"
+          className="flex flex-col min-h-screen items-center justify-center tracking-wide"
         >
         <div className="text-center">
           <p className="text-whitesmoke text-6xl font-bold tracking-wide">
