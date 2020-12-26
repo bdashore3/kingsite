@@ -1,26 +1,29 @@
 import Masonry from 'react-masonry-component';
 
-const masonryOptions = {
-  gutter: 65,
+// Options for the masonry layout
+let masonryOptions = {
+  gutter: ".gutter-sizer",
+  transitionDuration: 200,
   horizontalOrder: true,
   fitWidth: true
 };
 
+// Basic function to create a work card
 function WorkCard(props) {
   let buttonText = "View source"
 
-  if (props.url.includes("https://github.com")) {
+  if (props.url.startsWith("https://github.com")) {
     buttonText = "View source code"
   }
 
   return(
-    <div className="grid-item p-5">
-      <h1 className="absolute underline text-3xl">{props.name}</h1>
-      <p className="relative inline-flex flex-grow align-center text-xl font-paragraph">{props.description}</p>
-      <div className="inline-flex absolute bottom-4">
+    <div className="grid-item p-5 max-w-75v min-h-30v md:max-w-40v md:min-h-25v lg:max-w-25v lg:min-h-35v">
+      <h1 className="relative underline text-2xl lg:text-3xl">{props.name}</h1>
+      <p className="relative inline-flex flex-grow align-center text-md mt-4 mb-4 lg:text-xl font-paragraph">{props.description}</p>
+      <div className="inline-flex bottom-4">
         <a href={props.url} target="_blank">
           <button
-            className="text-lg rounded-md px-3 py-2 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke"
+            className="text-md lg:text-lg rounded-md px-3 py-1 lg:py-2 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke"
           >
             {buttonText}
           </button>
@@ -33,14 +36,14 @@ function WorkCard(props) {
 export default function Work() {
   return(
     <div className="flex flex-col min-h-screen">
-    <div id="work" className="h-18"></div>
     <div className="inline-flex flex-col flex-grow overflow-visible">
       <h1
-        className="text-yellow-300 text-center text-6xl font-header font-semibold tracking-wide p-3"
+        className="text-yellow-300 text-center text-4xl md:text-5xl lg:text-6xl leading-normal lg:leading-relaxed font-header font-semibold tracking-wide p-3"
       >
         My Work
       </h1>
-      <Masonry options={masonryOptions} className="max-w-full my-0 mx-auto p-12">
+      <Masonry options={masonryOptions} className="max-w-full lg:-my-10 mx-auto lg:p-12">
+        <div className="gutter-sizer"></div>
         <WorkCard
           name="RoyalGuard"
           description="Makes your discord administration experience simple and easy."

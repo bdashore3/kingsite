@@ -6,21 +6,26 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 */
 function NavElement(props) {
   let link;
-  if (props.url.substring(0, 1) === "#") {
+  if (props.url.startsWith('#')) {
     link = 
       <AnchorLink 
-        href={props.url} 
-        className="list-button text-center relative tracking-wide"
+        href={props.url}
       >
-        {props.name}
+        <button className="relative text-whitesmoke list-button font-navigation text-center text-xl lg:text-2xl tracking-wide">
+          <span className="hidden md:inline-block">{props.name}</span>
+          <span className="md:hidden">{props.altName}</span>
+        </button>
       </AnchorLink>
   } else {
     link = 
       <a 
         href={props.url}
-        className="list-button text-center relative tracking-wide"
+        className="relative"
       >
-        {props.name}
+        <button className="relative text-whitesmoke list-button font-navigation text-center text-xl lg:text-2xl tracking-wide">
+          <span className="hidden md:inline-block">{props.name}</span>
+          <span className="md:hidden">{props.altName}</span>
+        </button>
       </a>
   }
 
@@ -34,27 +39,28 @@ function NavElement(props) {
 // All parts except the Image and configuration drop downs use the NavElement function
 export default function Nav() {
   return (
-    <nav className="fixed w-full top-0 bg-lightbg z-10 shadow-drop px-40">
+    <nav className="flex fixed w-full bottom-0 md:top-0 bg-lightbg z-10 shadow-drop h-14 md:h-16 lg:h-20 xl:px-40">
       <ul
-        className="grid grid-cols-5 mx-20 justify-items-center items-center text-whitesmoke list-none justify-between font-navigation text-2xl"
+        className="grid grid-cols-4 md:grid-cols-5 flex-grow items-center justify-items-center lg:mx-20 list-none justify-between"
       >
-        <NavElement name="About Me" url="#about" />
-        <NavElement name="My Work" url="#work" />
-        <li>
+        <NavElement name="About Me" altName="About" url="#about" />
+        <NavElement name="My Work" altName="Work" url="#work" />
+        <li id="navHome" className="hidden md:inline-block">
           <AnchorLink href="#home">
             <img
               src="/favicon.svg"
               type="image/svg"
               href="#home"
-              width="75px"
-              height="75px"
+              width="30%"
+              className="mx-auto"
             />
           </AnchorLink>
         </li>
-        <NavElement name="Resources" url="https://files.kingbri.me" />
+        <NavElement name="Resources" altName="Files" url="https://files.kingbri.me" />
         <li>
-          <button className="list-button text-center relative tracking-wide">
-            Configuration
+          <button className="list-button text-center relative tracking-wide text-whitesmoke font-navigation text-xl lg:text-2xl">
+            <span className="hidden md:inline-block">Configuration</span>
+            <span className="md:hidden">More</span>
           </button>
         </li>
       </ul>

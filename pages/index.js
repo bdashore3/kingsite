@@ -1,8 +1,9 @@
-import Nav from '../components/nav.jsx';
-import Home from '../components/home.jsx';
-import About from '../components/about.jsx';
-import Work from '../components/work.jsx';
-import Socials from '../components/socials.jsx';
+import Nav from '../components/nav';
+import Home from '../components/home';
+import About from '../components/about';
+import Work from '../components/work';
+import Socials from '../components/socials';
+import { Separator } from '../components/misc'
 
 import Head from 'next/head';
 
@@ -19,7 +20,9 @@ export default function IndexPage() {
       </Head>
       <Nav />
       <Home />
+      <Separator id="about" />
       <About />
+      <Separator id="work" />
       <Work />
       <Socials />
     </div>

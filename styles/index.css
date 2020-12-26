@@ -10,7 +10,6 @@ body {
   animation-fill-mode: forwards;
   background-color: #0f151c;
 }
-
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -26,6 +25,19 @@ body {
 .button-container:hover {
   background-color: whitesmoke;
   color: #0e1722;
+}
+
+.home-text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+@media (max-width: 640px) {
+  .home-text {
+    top: 40%;
+    transform: translate(0, -40%);
+  }
 }
 
 .arrow {
@@ -64,6 +76,12 @@ body {
   height: 4rem;
   transition-duration: 0.3s;
 }
+@media (max-width: 640px) {
+  .contact-button {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
 
 .grid-container {
   display: grid;
@@ -77,10 +95,22 @@ body {
   border-radius: 0.5rem;
   background-color: #243242;
   color: whitesmoke;
-  width: 32rem;
-  height: 19rem;
   position: relative;
   margin-bottom: 4rem;
+}
+
+.gutter-sizer {
+  width: 11%;
+}
+@media (max-width: 640px) {
+  .gutter-sizer {
+    width: 0;
+  }
+}
+@media (max-width: 880px) {
+  .gutter-sizer {
+    width: 11%; 
+  }
 }
 
 .align-center {
