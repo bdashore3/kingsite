@@ -17,7 +17,7 @@ function WorkCard(props) {
   }
 
   return(
-    <div className="grid-item p-5 max-w-75v min-h-30v md:max-w-40v md:min-h-25v lg:max-w-25v lg:min-h-35v">
+    <div className="grid-item p-5 max-w-75v min-h-30v md:max-w-40v md:min-h-25v lg:max-w-25v lg:min-h-35v lg:max-h-45v">
       <h1 className="relative underline text-2xl lg:text-3xl">{props.name}</h1>
       <p className="relative inline-flex flex-grow align-center text-md mt-4 mb-4 lg:text-xl font-paragraph">{props.description}</p>
       <div className="inline-flex bottom-4">

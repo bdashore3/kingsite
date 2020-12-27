@@ -30,6 +30,16 @@ module.exports = {
       inset: {
         '4': '1rem',
       },
+      minWidth: {
+        '7xl': '85rem',
+        '25v': '25vw',
+        '30v': '30vw',
+        '35v': '35vw',
+        '40v': '40vw',
+        '45v': '45vw',
+        '50v': '50vw',
+        '75v': '75vw'
+      },
       maxWidth: {
         '7xl': '85rem',
         '25v': '25vw',
@@ -41,6 +51,16 @@ module.exports = {
         '75v': '75vw'
       },
       minHeight: {
+        '20v': '20vh',
+        '25v': '25vh',
+        '30v': '30vh',
+        '35v': '35vh',
+        '40v': '40vh',
+        '45v': '45vh',
+        '50v': '50vh',
+        '75v': '75vh'
+      },
+      maxHeight: {
         '20v': '20vh',
         '25v': '25vh',
         '30v': '30vh',
