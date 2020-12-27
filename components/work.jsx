@@ -21,7 +21,7 @@ function WorkCard(props) {
       <h1 className="relative underline text-2xl lg:text-3xl">{props.name}</h1>
       <p className="relative inline-flex flex-grow align-center text-md mt-4 mb-4 lg:text-xl font-paragraph">{props.description}</p>
       <div className="inline-flex bottom-4">
-        <a href={props.url} target="_blank">
+        <a href={props.url} target="_blank" rel="noopener">
           <button
             className="text-md lg:text-lg rounded-md px-3 py-1 lg:py-2 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke"
           >

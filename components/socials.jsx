@@ -2,7 +2,7 @@
 function SocialButton(props) {
   return(
     <li className="px-2 md:px-3">
-      <a href={props.url} target="_blank">
+      <a href={props.url} target="_blank" rel="noopener">
         <svg
           viewBox="0 0 24 24"
           className={`contact-button ${props.color}`}
