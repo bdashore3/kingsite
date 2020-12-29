@@ -1,28 +1,21 @@
 // Function for a single social icon
 function SocialButton(props) {
-  return(
+  return (
     <li className="px-2 md:px-3">
       <a href={props.url} target="_blank" rel="noopener">
-        <svg
-          viewBox="0 0 24 24"
-          className={`contact-button ${props.color}`}
-        >
-          <path
-            d={props.svgPath}
-          />
+        <svg viewBox="0 0 24 24" className={`contact-button ${props.color}`}>
+          <path d={props.svgPath} />
         </svg>
       </a>
     </li>
-  )
+  );
 }
 
 export default function Socials() {
-  return(
+  return (
     <footer id="socials" className="flex justify-center p-8">
       <div className="flex flex-col justify-center">
-        <h1
-          className="text-yellow-300 text-3xl lg:text-4xl text-center font-header font-semibold"
-        >
+        <h1 className="text-yellow-300 text-3xl lg:text-4xl text-center font-header font-semibold">
           Social Links
         </h1>
         <ul className="py-10 flex items-center">
@@ -77,9 +70,8 @@ export default function Socials() {
             2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 
             19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"
           />
-
         </ul>
       </div>
     </footer>
-  )
+  );
 }
