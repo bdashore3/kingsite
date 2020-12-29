@@ -1,8 +1,16 @@
+import { ReactElement } from 'react';
+
+interface Props {
+  color: string;
+  svgPath: string;
+  url: string;
+}
+
 // Function for a single social icon
-function SocialButton(props) {
+function SocialButton(props: Props): ReactElement {
   return (
     <li className="px-2 md:px-3">
-      <a href={props.url} target="_blank" rel="noopener">
+      <a href={props.url} target="_blank" rel="noreferrer noopener">
         <svg viewBox="0 0 24 24" className={`contact-button ${props.color}`}>
           <path d={props.svgPath} />
         </svg>
@@ -11,7 +19,7 @@ function SocialButton(props) {
   );
 }
 
-export default function Socials() {
+export default function Socials(): ReactElement {
   return (
     <footer id="socials" className="flex justify-center p-8">
       <div className="flex flex-col justify-center">

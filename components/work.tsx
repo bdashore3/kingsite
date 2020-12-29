@@ -1,7 +1,14 @@
 import Masonry from 'react-masonry-component';
+import { ReactElement } from 'react';
+
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+}
 
 // Options for the masonry layout
-let masonryOptions = {
+const masonryOptions = {
   gutter: '.gutter-sizer',
   transitionDuration: 200,
   horizontalOrder: true,
@@ -9,7 +16,7 @@ let masonryOptions = {
 };
 
 // Basic function to create a work card
-function WorkCard(props) {
+function WorkCard(props: Props): ReactElement {
   let buttonText = 'View source';
 
   if (props.url.startsWith('https://github.com')) {
@@ -23,7 +30,7 @@ function WorkCard(props) {
         {props.description}
       </p>
       <div className="inline-flex bottom-4">
-        <a href={props.url} target="_blank" rel="noopener">
+        <a href={props.url} target="_blank" rel="noreferrer noopener">
           <button className="text-md lg:text-lg rounded-md px-3 py-1 lg:py-2 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke">
             {buttonText}
           </button>
@@ -33,7 +40,7 @@ function WorkCard(props) {
   );
 }
 
-export default function Work() {
+export default function Work(): ReactElement {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="inline-flex flex-col flex-grow overflow-visible">
