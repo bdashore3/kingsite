@@ -1,5 +1,3 @@
-import { ReactElement } from 'react';
-
 interface Props {
   color: string;
   svgPath: string;
@@ -7,7 +5,7 @@ interface Props {
 }
 
 // Function for a single social icon
-function SocialButton(props: Props): ReactElement {
+function SocialButton(props: Props) {
   return (
     <li className="px-2 md:px-3">
       <a href={props.url} target="_blank" rel="noreferrer noopener">
@@ -19,7 +17,7 @@ function SocialButton(props: Props): ReactElement {
   );
 }
 
-export default function Socials(): ReactElement {
+export default function Socials() {
   return (
     <footer id="socials" className="flex justify-center p-8">
       <div className="flex flex-col justify-center">
