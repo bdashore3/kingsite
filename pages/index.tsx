@@ -6,9 +6,8 @@ import Socials from '../components/socials';
 import { Separator } from '../components/misc';
 
 import Head from 'next/head';
-import { ReactElement } from 'react';
 
-export default function IndexPage(): ReactElement {
+export default function IndexPage() {
   return (
     <div>
       <Head>

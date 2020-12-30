@@ -1,4 +1,3 @@
-import { ReactElement } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 interface Props {
@@ -11,7 +10,7 @@ interface Props {
   Function for a basic navigation bar element
   Uses AnchorLinks for on-site pages
 */
-function NavElement(props: Props): ReactElement {
+function NavElement(props: Props) {
   let link;
   if (props.url.startsWith('#')) {
     link = (
@@ -37,7 +36,7 @@ function NavElement(props: Props): ReactElement {
 }
 
 // All parts except the Image and configuration drop downs use the NavElement function
-export default function Nav(): ReactElement {
+export default function Nav() {
   return (
     <nav className="flex fixed w-full bottom-0 md:top-0 bg-lightbg z-10 shadow-drop h-14 md:h-16 lg:h-20 xl:px-40">
       <ul className="grid grid-cols-4 md:grid-cols-5 flex-grow items-center justify-items-center lg:mx-20 list-none justify-between">

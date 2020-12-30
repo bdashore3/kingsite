@@ -1,6 +1,4 @@
-import { ReactElement } from 'react';
-
-export default function About(): ReactElement {
+export default function About() {
   return (
     <div className="flex flex-col min-h-screen border-solid">
       <div className="flex-grow inline-flex items-center flex-col overflow-visible">

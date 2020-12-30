@@ -1,5 +1,4 @@
 import Masonry from 'react-masonry-component';
-import { ReactElement } from 'react';
 
 interface Props {
   name: string;
@@ -16,7 +15,7 @@ const masonryOptions = {
 };
 
 // Basic function to create a work card
-function WorkCard(props: Props): ReactElement {
+function WorkCard(props: Props) {
   let buttonText = 'View source';
 
   if (props.url.startsWith('https://github.com')) {
@@ -40,7 +39,7 @@ function WorkCard(props: Props): ReactElement {
   );
 }
 
-export default function Work(): ReactElement {
+export default function Work() {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="inline-flex flex-col flex-grow overflow-visible">
