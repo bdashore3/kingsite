@@ -1,9 +1,9 @@
-import Nav from '../components/nav';
-import Home from '../components/home';
-import About from '../components/about';
-import Work from '../components/work';
-import Socials from '../components/socials';
-import { Separator } from '../components/misc';
+import Nav from '../components/index/nav';
+import Home from '../components/index/home';
+import About from '../components/index/about';
+import Work from '../components/index/work';
+import Socials from '../components/index/socials';
+import { Separator } from '../components/utils/misc';
 
 import Head from 'next/head';
 
