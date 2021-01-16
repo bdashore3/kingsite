@@ -2,7 +2,7 @@ import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 import sanity from '../../../lib/sanity';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import { Post } from '../../../studio/schemas/schema';
+import { Post } from '../../../@types/sanity-schema';
 import Nav from '../../../components/index/nav';
 import { Separator } from '../../../components/utils/misc';
 

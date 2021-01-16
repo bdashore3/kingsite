@@ -3,7 +3,7 @@ import sanity from '../lib/sanity';
 import BlogHome from '../components/blog/home';
 import Nav from '../components/index/nav';
 import { Separator } from '../components/utils/misc';
-import { Post } from '../studio/schemas/schema';
+import { Post } from '../@types/sanity-schema';
 
 import Head from 'next/head';
 
