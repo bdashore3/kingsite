@@ -1,7 +1,11 @@
-import sanityClient from '@sanity/client';
+import { createClient } from 'next-sanity';
 
-export default sanityClient({
-  projectId: 'ocdenn1c',
+const config = {
   dataset: 'production',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
   useCdn: true
-});
+};
+
+const sanity = createClient(config);
+
+export default sanity;
