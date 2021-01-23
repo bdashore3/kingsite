@@ -1,18 +1,18 @@
 import Link from 'next/link';
 import sanity from '../lib/sanity';
 import BlogHome from '../components/blog/home';
+import BlogPost from '../components/blog/post';
 import Nav from '../components/index/nav';
 import { Separator } from '../components/utils/misc';
-import { Post } from '../@types/sanity-schema';
+import { Post } from '../models/schema';
 
 import Head from 'next/head';
 
 interface Props {
-  posts: Array<Post>;
+  posts: Post[];
 }
 
-export default function Blog(props: Props) {
-  const { posts = [] } = props;
+export default function Blog({ posts }: Props) {
   return (
     <div>
       <Head>
@@ -23,24 +23,22 @@ export default function Blog(props: Props) {
       </Head>
       <Nav />
       <Separator id="" />
-      <BlogHome />
-      {posts.map(
-        ({ _id, title = '', slug = '', _updatedAt = '' }: any) =>
-          slug && (
-            <li key={_id} className="text-whitesmoke">
-              <Link href="/blog/post/[slug]" as={`/blog/post/${slug.current}`}>
-                <a>{title}</a>
-              </Link>{' '}
-              ({new Date(_updatedAt).toDateString()})
-            </li>
-          )
-      )}
+      <BlogHome posts={posts} />
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const posts = await sanity.fetch(`*[_type == "post"]|order(publishedAt desc)`);
+  const posts = await sanity.fetch<Post[]>(
+    `*[_type == "post"] | order(publishedAt desc){
+      _id,
+      title,
+      publishedAt,
+      excerpt,
+      'slug': slug.current,
+      'author': author->{name, 'picture': image.asset->url},
+    }`
+  );
   return {
     props: {
       posts: posts
