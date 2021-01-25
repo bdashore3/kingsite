@@ -1,46 +1,13 @@
-import imageUrlBuilder from '@sanity/image-url';
-import BlockContent from '@sanity/block-content-to-react';
 import sanity from '../../../lib/sanity';
-import { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import { Post } from '../../../@types/sanity-schema';
-import Nav from '../../../components/index/nav';
-import { Separator } from '../../../components/utils/misc';
-
-function urlFor(source: SanityImageSource) {
-  return imageUrlBuilder(sanity).image(source);
-}
+import { FullPost, Post } from '../../../models/schema';
+import BlogPostContent from '../../../components/blog/post';
 
 interface Props {
-  title: string;
-  name: string;
-  categories: Array<string>;
-  authorImage: Record<string, unknown>;
-  body: Record<string, unknown>;
+  postData: FullPost;
 }
 
-export default function BlogPost(props: Props) {
-  return (
-    <article className="text-whitesmoke">
-      <Nav />
-      <Separator id="" />
-      <h1>{props.title}</h1>
-      <span>By {props.name}</span>
-      {props.categories && (
-        <ul>
-          Posted in
-          {props.categories.map((category) => (
-            <li key={category}>{category}</li>
-          ))}
-        </ul>
-      )}
-      {props.authorImage && (
-        <div>
-          <img src={urlFor(props.authorImage).width(50).url() || undefined} alt="" />
-        </div>
-      )}
-      <BlockContent blocks={props.body} {...sanity.config()} />
-    </article>
-  );
+export default function BlogPost({ postData }: Props) {
+  return <BlogPostContent postData={postData} />;
 }
 
 type Params = {
@@ -51,12 +18,11 @@ type Params = {
 
 export async function getStaticProps({ params }: Params) {
   const slug = params.slug;
-  const data = await sanity.fetch(
+  const postData = await sanity.fetch<FullPost>(
     `*[_type == "post" && slug.current == $slug][0]{
       title,
-      "name": author->name,
-      "categories": categories[]->title,
-      "authorImage": author->image,
+      'author': author->{name, 'image': image.asset->url},
+      'categories': categories[]->title,
       body
     }`,
     { slug }
@@ -64,11 +30,7 @@ export async function getStaticProps({ params }: Params) {
 
   return {
     props: {
-      title: data.title,
-      name: data.name,
-      categories: data?.categories || null,
-      authorImage: data?.authorImage || null,
-      body: data.body
+      postData
     },
     revalidate: 1
   };
