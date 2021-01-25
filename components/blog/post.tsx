@@ -1,10 +1,10 @@
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
-import sanity from '../../lib/sanity';
+import sanity from '@/lib/sanity';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import { FullPost } from '../../models/schema';
-import Nav from '../../components/index/nav';
-import { Separator } from '../../components/utils/misc';
+import { FullPost } from '@/models/schema';
+import Nav from '@/components/index/nav';
+import { Separator } from '@/components/utils/misc';
 
 function urlFor(source: SanityImageSource) {
   return imageUrlBuilder(sanity).image(source);

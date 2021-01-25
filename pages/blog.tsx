@@ -1,10 +1,10 @@
-import sanity from '../lib/sanity';
-import BlogHome from '../components/blog/home';
-import Nav from '../components/index/nav';
+import sanity from '@/lib/sanity';
+import BlogHome from '@/components/blog/home';
+import Nav from '@/components/index/nav';
 import { Separator } from '../components/utils/misc';
 
 import Head from 'next/head';
-import { FullPost } from '../models/schema';
+import { FullPost } from '@/models/schema';
 
 interface Props {
   posts: FullPost[];

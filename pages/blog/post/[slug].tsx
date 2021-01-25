@@ -1,6 +1,6 @@
-import sanity from '../../../lib/sanity';
-import { FullPost, Post } from '../../../models/schema';
-import BlogPostContent from '../../../components/blog/post';
+import sanity from '@/lib/sanity';
+import { FullPost, Post } from '@/models/schema';
+import BlogPostContent from '@/components/blog/post';
 
 interface Props {
   postData: FullPost;
