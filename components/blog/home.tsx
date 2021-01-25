@@ -1,4 +1,4 @@
-import { FullPost, Post } from '../../models/schema';
+import { FullPost } from '@/models/schema';
 import Link from 'next/link';
 
 interface Props {
