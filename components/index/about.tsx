@@ -1,12 +1,12 @@
 export default function About() {
   return (
-    <div className="flex flex-col min-h-screen border-solid">
+    <div className="flex flex-col min-h-screen">
       <div className="flex-grow inline-flex items-center flex-col overflow-visible">
-        <h1 className="text-yellow-300 text-center text-4xl md:text-5xl lg:text-6xl leading-normal lg:leading-relaxed font-header font-semibold tracking-wide p-3">
+        <h1 className="text-yellow-300 text-center text-4xl md:text-5xl lg:text-6xl lg:leading-spread font-header font-semibold tracking-wide p-3">
           Who am I?
         </h1>
-        <div className="lg:px-10 mx-4 lg:mx-48 rounded-3xl relative bg-lightbg font-medium max-w-7xl">
-          <p className="text-whitesmoke text-sm lg:text-xl p-6 font-paragraph tracking-wide leading-normal lg:leading-relaxed">
+        <div className="md:max-w-3xl xl:max-w-4xl rounded-xl relative bg-lightbg font-medium">
+          <p className="text-whitesmoke px-6 lg:px-10 text-md lg:text-lg py-6 font-paragraph tracking-wide leading-spread">
             My name is Brian Dashore, a self-taught hobbyist developer, and I am studying for a
             degree in medicine. I am currently located in Long Island, New York.
             <br />
