@@ -112,6 +112,8 @@ declare module '@sanity/block-content-to-react' {
     projectId?: string;
     /** Name of the Sanity dataset containing the document that is being rendered. */
     dataset?: string;
+
+    defaultSerializers?: any;
   }
 
   /** React component for transforming Sanity block content to React components */
