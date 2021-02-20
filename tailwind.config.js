@@ -1,12 +1,13 @@
 module.exports = {
   purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'media', // 'media' or 'class'
+  darkMode: 'media',
   theme: {
     extend: {
       colors: {
         whitesmoke: '#f5f5f5',
-        darkbg: '#0f151c',
-        lightbg: '#243242',
+        darkbg: '#17202b',
+        lightbg: '#1b2532',
+        fadebg: '#243142',
         twitch: '#593e85',
         email: '#3b64af',
         twitter: '#1da1f3',
@@ -19,16 +20,19 @@ module.exports = {
       fontFamily: {
         header: ['Montserrat', 'Calibri'],
         navigation: ['Raleway', 'Calibri'],
-        paragraph: ['Open Sans', 'Calibri'],
+        paragraph: ['Open Sans', 'Calibri']
       },
       height: {
-        '18': "4.5rem",
+        18: '4.5rem'
       },
       boxShadow: {
-        drop: '0 0px 10px 8px #0f151c',
+        drop: '0 0px 10px 8px #0f151c'
       },
       inset: {
-        '4': '1rem',
+        4: '1rem'
+      },
+      lineHeight: {
+        'spread': '1.75'
       },
       minWidth: {
         '7xl': '85rem',
@@ -69,11 +73,13 @@ module.exports = {
         '45v': '45vh',
         '50v': '50vh',
         '75v': '75vh'
-      },
-    },
+      }
+    }
   },
   variants: {
-    extend: {},
+    extend: {
+      textColor: ['visited']
+    }
   },
-  plugins: [],
-}
+  plugins: []
+};
