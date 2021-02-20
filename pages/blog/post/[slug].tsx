@@ -1,13 +1,27 @@
-import sanity from '@/lib/sanity';
+import { sanity } from '@/lib/sanity';
 import { FullPost, Post } from '@/models/schema';
 import BlogPostContent from '@/components/blog/post';
+import PostNotFound from '@/components/blog/notFound';
+import Head from 'next/head';
+import Error from 'next/error';
 
 interface Props {
-  postData: FullPost;
+  post: FullPost;
 }
 
-export default function BlogPost({ postData }: Props) {
-  return <BlogPostContent postData={postData} />;
+export default function BlogPost({ post }: Props) {
+  return (
+    <>
+      <Head>
+        <title>{post.title}</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <BlogPostContent postData={post} />
+    </>
+  );
 }
 
 type Params = {
@@ -18,19 +32,24 @@ type Params = {
 
 export async function getStaticProps({ params }: Params) {
   const slug = params.slug;
-  const postData = await sanity.fetch<FullPost>(
+  const post = await sanity.fetch<FullPost>(
     `*[_type == "post" && slug.current == $slug][0]{
       title,
-      'author': author->{name, 'image': image.asset->url},
-      'categories': categories[]->title,
+      'author': author->{name, 'image': image.asset->url, 'bio': bio[]},
       body
     }`,
     { slug }
   );
 
+  if (!post) {
+    return {
+      notFound: true
+    };
+  }
+
   return {
     props: {
-      postData
+      post
     },
     revalidate: 1
   };
@@ -45,6 +64,6 @@ export async function getStaticPaths() {
           slug: post.slug
         }
       })) || [],
-    fallback: true
+    fallback: false
   };
 }

@@ -9,7 +9,7 @@ import Head from 'next/head';
 
 export default function IndexPage() {
   return (
-    <div>
+    <>
       <Head>
         <link rel="icon" type="image/svg" href="/favicon.svg" />
         <meta property="og:title" content="Kingbri's website" />
@@ -41,6 +41,6 @@ export default function IndexPage() {
       <Separator id="work" />
       <Work />
       <Socials />
-    </div>
+    </>
   );
 }

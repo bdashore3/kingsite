@@ -1,4 +1,5 @@
-import { createClient } from 'next-sanity';
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import { createClient, createImageUrlBuilder } from 'next-sanity';
 
 const config = {
   dataset: 'production',
@@ -6,6 +7,5 @@ const config = {
   useCdn: true
 };
 
-const sanity = createClient(config);
-
-export default sanity;
+export const sanity = createClient(config);
+export const urlFor = (source: SanityImageSource) => createImageUrlBuilder(config).image(source);

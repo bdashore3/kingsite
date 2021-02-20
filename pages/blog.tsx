@@ -1,4 +1,4 @@
-import sanity from '@/lib/sanity';
+import { sanity } from '@/lib/sanity';
 import BlogHome from '@/components/blog/home';
 import Nav from '@/components/index/nav';
 import { Separator } from '../components/utils/misc';
@@ -12,17 +12,23 @@ interface Props {
 
 export default function Blog({ posts }: Props) {
   return (
-    <div>
+    <>
       <Head>
+        <title>Blog</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
           rel="stylesheet"
         />
       </Head>
       <Nav />
-      <Separator id="" />
+      <div className="hidden md:block">
+        <Separator />
+      </div>
       <BlogHome posts={posts} />
-    </div>
+      <div className="md:hidden">
+        <Separator />
+      </div>
+    </>
   );
 }
 
