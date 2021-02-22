@@ -4,6 +4,7 @@ import BlogPostContent from '@/components/blog/post';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import FourOhFour from 'pages/404';
+import { blockToString } from '@/components/utils/misc';
 
 interface Props {
   post: FullPost;
@@ -25,6 +26,15 @@ export default function BlogPost({ post }: Props) {
       ) : (
         <>
           <Head>
+            <meta property="og:title" content={post.title} />
+            <meta property="og:type" content="website" />
+            <meta
+              property="og:url"
+              content={'https://kingbri.me/blog/post/' + post.slug?.current}
+            />
+            <meta property="og:description" content={blockToString(post.excerpt)} />
+            <meta name="Description" content={blockToString(post.excerpt)} />
+            <meta name="theme-color" content="#ffd700" />
             <title>{post.title}</title>
             <link
               href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
@@ -50,6 +60,7 @@ export async function getStaticProps({ params }: Params) {
     `*[_type == "post" && slug.current == $slug][0]{
       title,
       slug,
+      excerpt,
       'author': author->{name, 'image': image.asset->url, 'bio': bio[]},
       body
     }`,

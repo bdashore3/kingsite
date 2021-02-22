@@ -14,6 +14,22 @@ export default function Blog({ posts }: Props) {
   return (
     <>
       <Head>
+        <meta property="og:title" content="Brian Dashore | Blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kingbri.me/blog" />
+        <meta
+          property="og:description"
+          content="This is Brian Dashore's personal blog. I post a lot of random things here. All opinions are my own."
+        />
+        <meta
+          name="Description"
+          content="This is Brian Dashore's personal blog. I post a lot of random things here. All opinions are my own."
+        />
+        <meta
+          property="og:image"
+          content="https://avatars1.githubusercontent.com/u/8082010?s=460&u=6f29bfc7183955182abe0625dc1cc8054db0f2b9&v=4"
+        />
+        <meta name="theme-color" content="#ffd700" />
         <title>Blog</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"

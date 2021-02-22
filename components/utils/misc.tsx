@@ -1,6 +1,6 @@
 // Miscellaneous components used in the website
 
-import { Code, ImageWithDescription } from '@/models/schema';
+import { Code, ImageWithDescription, SanityBlock } from '@/models/schema';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { urlFor } from '@/lib/sanity';
@@ -47,4 +47,19 @@ export function ImageSerializer({ node }: ImageProps) {
       className="block mx-auto my-5"
     />
   );
+}
+
+// Any used here due to ambiguous type
+export function blockToString(blocks: SanityBlock[] | undefined) {
+  if (blocks) {
+    return blocks
+      .map((block) => {
+        if (block._type !== 'block' || !block.children) {
+          return '';
+        }
+        // eslint-disable-next-line
+        return block.children.map((child: any) => child.text).join('');
+      })
+      .join('\n\n');
+  }
 }
