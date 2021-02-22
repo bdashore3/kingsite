@@ -30,6 +30,7 @@ export default function Blog({ posts }: Props) {
           content="https://avatars1.githubusercontent.com/u/8082010?s=460&u=6f29bfc7183955182abe0625dc1cc8054db0f2b9&v=4"
         />
         <meta name="theme-color" content="#ffd700" />
+        <link rel="icon" type="image/svg" href="/favicon.svg" />
         <title>Blog</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
