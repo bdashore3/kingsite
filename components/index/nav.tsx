@@ -12,20 +12,22 @@ interface Props {
 */
 function NavElement(props: Props) {
   return (
-    <Link href={props.url}>
-      <button className="focus:outline-none relative text-whitesmoke list-button font-navigation text-center text-xl lg:text-2xl tracking-wide">
-        <div>
-          {props.altName ? (
-            <>
-              <span className="hidden md:inline-block">{props.name}</span>
-              <span className="md:hidden">{props.altName}</span>
-            </>
-          ) : (
-            <span className="inline-block">{props.name}</span>
-          )}
-        </div>
-      </button>
-    </Link>
+    <li>
+      <Link href={props.url}>
+        <button className="focus:outline-none relative text-whitesmoke list-button font-navigation text-center text-xl lg:text-2xl tracking-wide">
+          <div>
+            {props.altName ? (
+              <>
+                <span className="hidden md:inline-block">{props.name}</span>
+                <span className="md:hidden">{props.altName}</span>
+              </>
+            ) : (
+              <span className="inline-block">{props.name}</span>
+            )}
+          </div>
+        </button>
+      </Link>
+    </li>
   );
 }
 
@@ -38,7 +40,13 @@ export default function Nav() {
         <NavElement name="My Work" altName="Work" url="/#work" />
         <li id="navHome" className="hidden md:inline-block">
           <Link href="/">
-            <img src="/favicon.svg" width="30%" className="mx-auto cursor-pointer" alt="" />
+            <img
+              src="/favicon.svg"
+              width="65px"
+              height="65px"
+              className="mx-auto cursor-pointer"
+              alt=""
+            />
           </Link>
         </li>
         <NavElement name="Resources" altName="Files" url="https://files.kingbri.me" />

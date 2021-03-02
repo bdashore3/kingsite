@@ -23,16 +23,9 @@ export default function IndexPage() {
           name="Description"
           content="My name's Brian. This is my website. I make a lot of cool things. Come take a look!"
         />
-        <meta
-          property="og:image"
-          content="https://avatars1.githubusercontent.com/u/8082010?s=460&u=6f29bfc7183955182abe0625dc1cc8054db0f2b9&v=4"
-        />
+        <meta property="og:image" content="/favicon.svg" />
         <meta name="theme-color" content="#ffd700" />
         <title>Brian Dashore</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <Nav />
       <Home />

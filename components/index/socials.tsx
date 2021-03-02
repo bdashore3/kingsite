@@ -1,4 +1,5 @@
 interface Props {
+  name: string;
   color: string;
   svgPath: string;
   url: string;
@@ -8,7 +9,7 @@ interface Props {
 function SocialButton(props: Props) {
   return (
     <li className="px-2 md:px-3">
-      <a href={props.url} target="_blank" rel="noreferrer noopener">
+      <a href={props.url} aria-label={props.name} target="_blank" rel="noreferrer noopener">
         <svg viewBox="0 0 24 24" className={`contact-button ${props.color}`}>
           <path d={props.svgPath} />
         </svg>
@@ -26,11 +27,13 @@ export default function Socials() {
         </h1>
         <ul className="py-10 flex items-center">
           <SocialButton
+            name="email"
             url="mailto:bdashore3@gmail.com"
             color="hover:text-green-400"
             svgPath="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
           />
           <SocialButton
+            name="github"
             url="https://github.com/bdashore3"
             color="hover:text-orange-400"
             svgPath="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 
@@ -42,6 +45,7 @@ export default function Socials() {
             22,12A10,10 0 0,0 12,2Z"
           />
           <SocialButton
+            name="twitter"
             url="https://twitter.com/kingbri1st"
             color="hover:text-twitter"
             svgPath="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4
@@ -51,6 +55,7 @@ export default function Socials() {
             8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"
           />
           <SocialButton
+            name="discord"
             url="https://discord.gg/pswt7by"
             color="hover:text-blurple"
             svgPath="M22,24L16.75,19L17.38,21H4.5A2.5,2.5 0 0,1 2,18.5V3.5A2.5,2.5 0 0,1 4.5,1H19.5A2.5,2.5 0 0,1 22,3.5V24M12,6.8C9.32,6.8 
@@ -62,12 +67,14 @@ export default function Socials() {
             15.27,11.86C15.27,12.55 14.75,13.13 14.1,13.13C13.46,13.13 12.94,12.55 12.94,11.86C12.94,11.16 13.45,10.59 14.1,10.59Z"
           />
           <SocialButton
+            name="twitch"
             url="https://twitch.tv/kingbrigames"
             color="hover:text-purple-600"
             svgPath="M11.64 5.93H13.07V10.21H11.64M15.57 5.93H17V10.21H15.57M7 2L3.43 5.57V18.43H7.71V22L11.29 18.43H14.14L20.57 12V2M19.14 11.29L16.29
             14.14H13.43L10.93 16.64V14.14H7.71V3.43H19.14Z"
           />
           <SocialButton
+            name="youtube"
             url="https://www.youtube.com/channel/UCuGB6NqD6HJlXiGGxpVqxhw"
             color="hover:text-red-600"
             svgPath="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 
