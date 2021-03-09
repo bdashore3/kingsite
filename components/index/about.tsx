@@ -23,7 +23,9 @@ export default function About() {
             and the International Mold Congress for CEU credits. If you would like to know more
             about my story, please go to{' '}
             <span>
-              <a href="https://teenlymehub.com" className="underline text-blue-300">
+              <a
+                href="https://teenlymehub.com"
+                className="underline text-blue-300 visited:text-purple-400">
                 teenlymehub.com
               </a>
             </span>

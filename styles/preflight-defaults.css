@@ -72,4 +72,7 @@
     margin-right: 0;
     padding-left: 40px;
   }
+  .blog-post a {
+    @apply underline text-blue-300 visited:text-purple-400;
+  }
 }
