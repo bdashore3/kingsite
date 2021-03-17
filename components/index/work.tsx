@@ -59,6 +59,11 @@ export default function Work() {
             url="https://github.com/bdashore3/CourtJester"
           />
           <WorkCard
+            name="Universal-RPC"
+            description="A simple and highly-configurable app that sets your Discord game activity to something custom."
+            url="https://github.com/bdashore3/Universal-RPC"
+          />
+          <WorkCard
             name="Simple Retweets"
             description="A bot that retweets mentioned posts on a configured account."
             url="https://github.com/bdashore3/RoyalGuard"
@@ -67,11 +72,6 @@ export default function Work() {
             name="KingBot-Twitch"
             description="My personal bot for Twitch. Is currently being rewritten in Rust."
             url="https://github.com/bdashore3/KingBot"
-          />
-          <WorkCard
-            name="KingKernel"
-            description="A custom kernel for the Google Pixel lineup with simplicity as the main feature."
-            url="https://github.com/King-Kernel"
           />
           <WorkCard
             name="RegalPack"
