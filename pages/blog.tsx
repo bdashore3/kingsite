@@ -32,10 +32,6 @@ export default function Blog({ posts }: Props) {
         <meta name="theme-color" content="#ffd700" />
         <link rel="icon" type="image/svg" href="/favicon.svg" />
         <title>Blog</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <Nav />
       <div className="hidden md:block">

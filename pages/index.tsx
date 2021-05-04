@@ -12,6 +12,10 @@ export default function IndexPage() {
     <>
       <Head>
         <link rel="icon" type="image/svg" href="/favicon.svg" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
+          rel="stylesheet"
+        />
         <meta property="og:title" content="Brian Dashore's website" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://kingbri.me" />
