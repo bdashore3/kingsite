@@ -1,6 +1,5 @@
 import { sanity } from '@/lib/sanity';
 import BlogHome from '@/components/blog/home';
-import Nav from '@/components/index/nav';
 import { Separator } from '../components/utils/misc';
 
 import Head from 'next/head';
@@ -33,7 +32,6 @@ export default function Blog({ posts }: Props) {
         <link rel="icon" type="image/svg" href="/favicon.svg" />
         <title>Blog</title>
       </Head>
-      <Nav />
       <div className="hidden md:block">
         <Separator />
       </div>

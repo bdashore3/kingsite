@@ -1,4 +1,3 @@
-import Nav from '@/components/index/nav';
 import Home from '@/components/index/home';
 import About from '@/components/index/about';
 import Work from '@/components/index/work';
@@ -12,10 +11,6 @@ export default function IndexPage() {
     <>
       <Head>
         <link rel="icon" type="image/svg" href="/favicon.svg" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
-          rel="stylesheet"
-        />
         <meta property="og:title" content="Brian Dashore's website" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://kingbri.me" />
@@ -31,7 +26,6 @@ export default function IndexPage() {
         <meta name="theme-color" content="#ffd700" />
         <title>Brian Dashore</title>
       </Head>
-      <Nav />
       <Home />
       <Separator id="about" />
       <About />

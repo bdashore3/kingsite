@@ -8,10 +8,6 @@ export default function FourOhFour() {
     <>
       <Head>
         <title>404</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <div className="flex flex-col min-h-screen justify-center">
         <div className="inline-flex flex-grow lg:flex-grow-0 flex-col text-center justify-center">

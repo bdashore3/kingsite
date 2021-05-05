@@ -18,7 +18,6 @@ const serializers = {
 export default function BlogPostContent({ postData }: Props) {
   return (
     <article className="text-whitesmoke">
-      <Nav />
       <div className="hidden md:block">
         <Separator />
       </div>

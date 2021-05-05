@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="relative flex flex-col min-h-screen items-center tracking-wide border-solid">
-      <div className="home-text text-center">
+      className="relative flex min-h-screen items-center justify-center tracking-wide border-solid">
+      <div className="mb-32 lg:mb-0 text-center">
         <p className="text-whitesmoke text-4xl lg:text-6xl lg:leading-relaxed font-bold tracking-wide">
           <b>Brian Dashore</b>
         </p>

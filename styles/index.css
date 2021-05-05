@@ -21,19 +21,6 @@ body {
   }
 }
 
-.home-text {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-@media (max-width: 640px) {
-  .home-text {
-    top: 40%;
-    transform: translate(0, -40%);
-  }
-}
-
 .button-container {
   transition-duration: 0.4s;
 }
@@ -128,6 +115,10 @@ body {
 
 .ws-s {
   word-spacing: 0.5rem;
+}
+
+.filebridge-privacy p {
+  @apply text-lg lg:text-xl;
 }
 
 @tailwind components;
