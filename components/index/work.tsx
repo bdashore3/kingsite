@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 interface Props {
   name: string;
   description: string;
@@ -42,6 +44,11 @@ export default function Work() {
           url="https://github.com/bdashore3/RoyalGuard"
         />
         <WorkCard
+          name="FileBridge"
+          description="An iOS application which bridges the gap between your iDevice and iTunes."
+          url="/filebridge"
+        />
+        <WorkCard
           name="CourtJester"
           description="A multipurpose bot which enhances your discord server experience."
           url="https://github.com/bdashore3/CourtJester"
@@ -57,14 +64,9 @@ export default function Work() {
           url="https://github.com/bdashore3/RoyalGuard"
         />
         <WorkCard
-          name="KingBot-Twitch"
-          description="My personal bot for Twitch. Is currently being rewritten in Rust."
-          url="https://github.com/bdashore3/KingBot"
-        />
-        <WorkCard
           name="RegalPack"
           description="A minecraft modpack that allows you to choose your own story."
-          url="https://www.curseforge.com/minecraft/modpacks/regalpack"
+          url="https://files.kingbri.me/RegalPack"
         />
       </div>
     </div>
