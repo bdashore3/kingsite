@@ -1,8 +1,8 @@
-import { sanity } from '@/lib/sanity';
-import BlogHome from '@/components/blog/home';
-import { Separator } from '../components/utils/misc';
-
 import Head from 'next/head';
+
+import BlogHome from '@/components/blog/home';
+import { Separator } from '@/components/utils/misc';
+import { sanity } from '@/lib/sanity';
 import { FullPost } from '@/models/schema';
 
 interface Props {

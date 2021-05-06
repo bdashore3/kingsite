@@ -1,7 +1,9 @@
-import Link from 'next/link';
 import Head from 'next/head';
-import { SocialButton, SocialImages } from '@/components/index/socials';
+import Link from 'next/link';
+
+import { SocialButton } from '@/components/index/socials';
 import { Separator } from '@/components/utils/misc';
+import SocialImages from '@/models/SocialImages';
 
 export default function FileBridgeLanding() {
   return (

@@ -1,8 +1,7 @@
-import ReactBlockContent from '@sanity/block-content-to-react';
+import { Separator, CodeSerializer, ImageSerializer } from '@/components/utils/misc';
 import { sanity, urlFor } from '@/lib/sanity';
 import { FullPost } from '@/models/schema';
-import Nav from '@/components/index/nav';
-import { Separator, CodeSerializer, ImageSerializer } from '@/components/utils/misc';
+import ReactBlockContent from '@sanity/block-content-to-react';
 
 interface Props {
   postData: FullPost;

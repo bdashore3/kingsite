@@ -1,7 +1,8 @@
-import { FullPost } from '@/models/schema';
 import Link from 'next/link';
-import ReactBlockContent from '@sanity/block-content-to-react';
+
 import { sanity } from '@/lib/sanity';
+import { FullPost } from '@/models/schema';
+import ReactBlockContent from '@sanity/block-content-to-react';
 
 type PostProps = {
   post: FullPost;

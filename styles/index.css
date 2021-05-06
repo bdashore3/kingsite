@@ -87,20 +87,6 @@ body {
   margin-bottom: 4rem;
 }
 
-.gutter-sizer {
-  width: 11%;
-}
-@media (max-width: 640px) {
-  .gutter-sizer {
-    width: 0;
-  }
-}
-@media (max-width: 880px) {
-  .gutter-sizer {
-    width: 11%;
-  }
-}
-
 .align-center {
   align-items: center;
 }
@@ -111,10 +97,6 @@ body {
 
 .spacing-m {
   border-spacing: 0 5rem;
-}
-
-.ws-s {
-  word-spacing: 0.5rem;
 }
 
 .filebridge-privacy p {

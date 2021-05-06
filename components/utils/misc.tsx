@@ -1,8 +1,8 @@
 // Miscellaneous components used in the website
-
-import { Code, ImageWithDescription, SanityBlock } from '@/models/schema';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+
+import { Code, ImageWithDescription, SanityBlock } from '@/models/schema';
 import { urlFor } from '@/lib/sanity';
 
 type SeparatorProps = {

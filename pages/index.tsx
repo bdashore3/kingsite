@@ -1,10 +1,10 @@
-import Home from '@/components/index/home';
-import About from '@/components/index/about';
-import Work from '@/components/index/work';
-import Socials from '@/components/index/socials';
-import { Separator } from '@/components/utils/misc';
-
 import Head from 'next/head';
+
+import About from '@/components/index/about';
+import Home from '@/components/index/home';
+import Socials from '@/components/index/socials';
+import Work from '@/components/index/work';
+import { Separator } from '@/components/utils/misc';
 
 export default function IndexPage() {
   return (

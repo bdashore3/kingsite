@@ -1,10 +1,11 @@
-import { sanity } from '@/lib/sanity';
-import { FullPost, Post } from '@/models/schema';
-import BlogPostContent from '@/components/blog/post';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import FourOhFour from 'pages/404';
+
+import BlogPostContent from '@/components/blog/post';
 import { blockToString } from '@/components/utils/misc';
+import { sanity } from '@/lib/sanity';
+import { FullPost, Post } from '@/models/schema';
+import FourOhFour from '@/pages/404';
 
 interface Props {
   post: FullPost;
