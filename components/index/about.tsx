@@ -44,13 +44,14 @@ export default function About() {
           <br />
           <span className="text-blue-400">Languages:</span>
           <br />
-          <span className="text-yellow-300">Rust, C#, JS, Python, HTML, CSS, C</span>
+          <span className="text-yellow-300">Rust, TS, JS, Swift, C#, Python, HTML, CSS, C</span>
           <br />
           <br />
           <span className="text-blue-400">Have used:</span>
           <br />
           <span className="text-yellow-300">
-            Discord bot API, Twitch API, Twitter bot API, React.js, Nextjs, Tailwind CSS, Git
+            SwiftUI, Discord bot API, Twitch API, Twitter bot API, React.js, Nextjs, Tailwind CSS,
+            Git
           </span>
         </p>
       </div>
