@@ -10,6 +10,7 @@ body {
   animation-fill-mode: forwards;
   background-color: #0f151c;
   color: whitesmoke;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 @keyframes fadeInAnimation {
@@ -101,6 +102,10 @@ body {
 
 .filebridge-privacy p {
   @apply text-lg lg:text-xl;
+}
+
+.pb-safe {
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
 }
 
 @tailwind components;
