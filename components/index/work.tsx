@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 interface Props {
   name: string;
   description: string;
@@ -22,7 +20,7 @@ function WorkCard(props: Props) {
       </p>
       <div className="inline-flex bottom-4">
         <a href={props.url} target="_blank" rel="noreferrer noopener">
-          <button className="text-md lg:text-lg rounded-md px-3 py-1 lg:py-2 duration-500 text-whitesmoke border hover:text-black hover:bg-whitesmoke">
+          <button className="text-md lg:text-lg rounded-md px-3 py-1 lg:py-2 duration-500 text-whitesmoke border-solid border-2 border-whitesmoke hover:text-black hover:bg-whitesmoke">
             {buttonText}
           </button>
         </a>
@@ -39,14 +37,19 @@ export default function Work() {
       </h1>
       <div className="inline-flex flex-row flex-wrap justify-center">
         <WorkCard
-          name="RoyalGuard"
-          description="Makes your discord administration experience simple and easy."
-          url="https://github.com/bdashore3/RoyalGuard"
+          name="MangaUpdates"
+          description="Reliable and cross-platform notifications for your ongoing mangas."
+          url="https://github.com/bdashore3/MangaUpdates"
         />
         <WorkCard
           name="FileBridge"
-          description="An iOS application which bridges the gap between your iDevice and iTunes."
+          description="An iOS application which bridges the gap between your iDevice and iTunes. Available on the App Store."
           url="/filebridge"
+        />
+        <WorkCard
+          name="RoyalGuard"
+          description="Makes your discord administration experience simple and easy."
+          url="https://github.com/bdashore3/RoyalGuard"
         />
         <WorkCard
           name="CourtJester"
@@ -62,11 +65,6 @@ export default function Work() {
           name="Simple Retweets"
           description="A bot that retweets mentioned posts on a configured account."
           url="https://github.com/bdashore3/RoyalGuard"
-        />
-        <WorkCard
-          name="RegalPack"
-          description="A minecraft modpack that allows you to choose your own story."
-          url="https://files.kingbri.me/RegalPack"
         />
       </div>
     </div>
