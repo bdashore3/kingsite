@@ -49,7 +49,7 @@ export default function Nav() {
             />
           </Link>
         </li>
-        <NavElement name="Resources" altName="Files" url="https://files.kingbri.me" />
+        <NavElement name="Resources" altName="Files" url="https://files.kingbri.dev" />
         <NavElement name="Blog" url="/blog" />
       </ul>
     </nav>
