@@ -37,9 +37,9 @@ export default function Work() {
       </h1>
       <div className="inline-flex flex-row flex-wrap justify-center">
         <WorkCard
-          name="MangaUpdates"
+          name="Tsūchi"
           description="Reliable and cross-platform notifications for your ongoing mangas."
-          url="https://github.com/bdashore3/MangaUpdates"
+          url="https://github.com/bdashore3/Tsuchi"
         />
         <WorkCard
           name="FileBridge"
