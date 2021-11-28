@@ -47,6 +47,11 @@ export default function Work() {
           url="/filebridge"
         />
         <WorkCard
+          name="Asobi"
+          description="An immersive web browser for iOS, iPadOS,and MacOS. Available on TestFlight."
+          url="/asobi"
+        />
+        <WorkCard
           name="RoyalGuard"
           description="Makes your discord administration experience simple and easy."
           url="https://github.com/bdashore3/RoyalGuard"
@@ -55,11 +60,6 @@ export default function Work() {
           name="CourtJester"
           description="A multipurpose bot which enhances your discord server experience."
           url="https://github.com/bdashore3/CourtJester"
-        />
-        <WorkCard
-          name="Universal-RPC"
-          description="A simple and highly-configurable app that sets your Discord game activity to something custom."
-          url="https://github.com/bdashore3/Universal-RPC"
         />
         <WorkCard
           name="Simple Retweets"
