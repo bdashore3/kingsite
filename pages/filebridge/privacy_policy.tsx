@@ -7,7 +7,7 @@ export default function FileBridgePrivacyPolicy() {
   return (
     <>
       <Head>
-        <link rel="icon" type="image/svg" href="/FileBridge.svg" />
+        <link rel="icon" type="image/png" href="/FileBridge.png" />
         <title>FileBridge | Privacy Policy</title>
       </Head>
       <article className="text-whitesmoke">
