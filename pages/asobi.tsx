@@ -12,10 +12,7 @@ export default function FileBridgeLanding() {
         <meta property="og:title" content="Asobi" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://kingbri.me/asobi" />
-        <meta
-          property="og:description"
-          content="An immersive browser for iOS, iPadOS, and Macs"
-        />
+        <meta property="og:description" content="An immersive browser for iOS, iPadOS, and Macs" />
         <meta name="Description" content="An immersive browser for iOS, iPadOS, and Macs" />
         <meta
           property="og:image"
@@ -42,18 +39,21 @@ export default function FileBridgeLanding() {
             Asobi
           </p>
           <p className="mt-4 font-paragraph text-whitesmoke text-lg lg:text-2xl">
-            An immersive browser for iOS, iPadOS, and Macs. Download on&nbsp;
-            <span>
-              <a
-                href="https://testflight.apple.com/join/tOiaybb5"
-                className="text-blue-300 underline">
-                TestFlight
-              </a>
-            </span>
+            An immersive browser for iOS, iPadOS, and Macs.
           </p>
         </div>
-        <div className="inline-flex justify-center">
-          <ul className="my-16 flex items-center">
+        <div className="mt-20 mb-16 inline-flex flex-col justify-center items-center">
+          <a
+            href="https://apps.apple.com/us/app/asobi/id1589812837"
+            target="_blank"
+            rel="noreferrer noopener">
+            <img
+              src="./DownloadAppStore.svg"
+              alt="Download on the app store"
+              className="h-12 lg:h-16"
+            />
+          </a>
+          <ul className="mt-4 lg:mt-6 flex items-center">
             <SocialButton
               name="github"
               url="https://github.com/bdashore3/Asobi"
