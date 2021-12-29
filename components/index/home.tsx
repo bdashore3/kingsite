@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 export default function Home() {
   return (
@@ -14,11 +15,11 @@ export default function Home() {
         </p>
       </div>
       <div className="flex w-full justify-center absolute bottom-0 mb-36 md:mb-8 lg:mb-16 text-center">
-        <Link href="#about">
+        <AnchorLink href="#about">
           <div className="button-container rounded-full w-12 h-12 border-solid border-2 cursor-pointer border-whitesmoke">
             <div className="arrow down m-auto w-2 h-2 relative mt-4"></div>
           </div>
-        </Link>
+        </AnchorLink>
       </div>
     </div>
   );
