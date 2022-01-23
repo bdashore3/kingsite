@@ -48,7 +48,7 @@ export default function Work() {
         />
         <WorkCard
           name="Asobi"
-          description="An immersive web browser for iOS, iPadOS,and MacOS. Available on TestFlight."
+          description="An immersive web browser for iOS, iPadOS,and MacOS. Available on the App Store."
           url="/asobi"
         />
         <WorkCard
