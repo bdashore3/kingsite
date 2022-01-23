@@ -1,4 +1,4 @@
-@tailwind base;
+@import "./tailwind-base.css";
 /* Custom classes here */
 html {
   scroll-behavior: smooth;

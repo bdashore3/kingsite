@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="flex flex-col min-h-screen flex-grow items-center overflow-visible">
+    <div className="flex flex-col min-h-screen grow items-center overflow-visible">
       <h1 className="text-yellow-300 text-center text-4xl md:text-5xl lg:text-6xl lg:leading-spread font-header font-semibold tracking-wide p-3">
         Who am I?
       </h1>

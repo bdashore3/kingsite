@@ -15,7 +15,7 @@ function WorkCard(props: Props) {
   return (
     <div className="work-card bg-lightbg p-5 m-8 max-w-75v min-h-30v md:max-w-40v md:min-h-25v lg:max-w-25v lg:min-h-35v lg:max-h-45v">
       <h1 className="relative underline text-2xl lg:text-3xl">{props.name}</h1>
-      <p className="relative inline-flex flex-grow align-center text-md mt-4 mb-4 lg:text-xl font-paragraph">
+      <p className="relative inline-flex grow align-center text-md mt-4 mb-4 lg:text-xl font-paragraph">
         {props.description}
       </p>
       <div className="inline-flex bottom-4">
@@ -31,7 +31,7 @@ function WorkCard(props: Props) {
 
 export default function Work() {
   return (
-    <div className="flex flex-col min-h-screen flex-grow overflow-visible">
+    <div className="flex flex-col min-h-screen grow overflow-visible">
       <h1 className="text-yellow-300 text-center text-4xl md:text-5xl lg:text-6xl leading-normal lg:leading-relaxed font-header font-semibold tracking-wide p-3">
         My Work
       </h1>
