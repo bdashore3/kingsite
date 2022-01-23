@@ -5,20 +5,14 @@ html {
 }
 
 body {
-  animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation: fadein 2s;
   background-color: #0f151c;
   color: whitesmoke;
 }
 
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .button-container {
