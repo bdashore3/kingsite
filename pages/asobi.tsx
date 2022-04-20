@@ -42,7 +42,7 @@ export default function FileBridgeLanding() {
             An immersive browser for iOS, iPadOS, and Macs.
           </p>
         </div>
-        <div className="mt-20 mb-16 inline-flex flex-col justify-center items-center">
+        <div className="mt-12 mb-16 inline-flex flex-col justify-center items-center">
           <a
             href="https://apps.apple.com/us/app/asobi/id1589812837"
             target="_blank"
@@ -53,6 +53,11 @@ export default function FileBridgeLanding() {
               className="h-12 lg:h-16"
             />
           </a>
+          <button className="border-solid border-2 mt-8 text-lg border-white p-2 rounded-md cursor-pointer hover:bg-white hover:text-black duration-200">
+              <a href="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+                Test audio playback
+              </a>
+            </button>
           <ul className="mt-4 lg:mt-6 flex items-center">
             <SocialButton
               name="github"
