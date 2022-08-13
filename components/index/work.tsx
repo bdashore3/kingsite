@@ -37,9 +37,9 @@ export default function Work() {
       </h1>
       <div className="inline-flex flex-row flex-wrap justify-center">
         <WorkCard
-          name="Tsūchi"
-          description="Reliable and cross-platform notifications for your ongoing mangas."
-          url="https://github.com/bdashore3/Tsuchi"
+          name="Ferrite"
+          description="A torrent searcher and debrid streamer for iOS."
+          url="/ferrite"
         />
         <WorkCard
           name="FileBridge"
@@ -62,9 +62,9 @@ export default function Work() {
           url="https://github.com/bdashore3/CourtJester"
         />
         <WorkCard
-          name="Simple Retweets"
-          description="A bot that retweets mentioned posts on a configured account."
-          url="https://github.com/bdashore3/RoyalGuard"
+          name="Tsūchi"
+          description="Reliable and cross-platform notifications for your ongoing mangas."
+          url="https://github.com/bdashore3/Tsuchi"
         />
       </div>
     </div>
