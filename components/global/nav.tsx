@@ -45,9 +45,7 @@ function NavElement({ name, altName, url }: Props) {
         </AnchorLink>
       ) : (
         <Link href={url}>
-          <a>
-            <NavButton name={name} altName={altName} url={url} />
-          </a>
+          <NavButton name={name} altName={altName} url={url} />
         </Link>
       )}
     </li>
