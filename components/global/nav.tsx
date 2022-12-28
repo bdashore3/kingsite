@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { forwardRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 interface Props {
@@ -56,8 +55,13 @@ function NavElement({ name, altName, url }: Props) {
 export default function Nav() {
   return (
     <nav className="flex fixed w-full bottom-0 md:top-0 bg-lightbg pt-4 md:pt-0 pb-safe md:pb-4 lg:pb-0 z-10 shadow-drop h-14 md:h-16 lg:h-20 xl:px-40">
-      <ul className="grid grid-cols-4 md:grid-cols-5 flex-grow items-center justify-items-center lg:mx-20 list-none justify-between">
-        <NavElement name="About Me" altName="About" url="/#about" />
+      <ul className="grid grid-cols-4 md:grid-cols-5 flex-grow items-center justify-items-center lg:mx-20 list-none">
+        <div className="md:hidden">
+          <NavElement name="Home" url="/" />
+        </div>
+        <div className="hidden md:inline-block">
+          <NavElement name="About Me" url="/#about" />
+        </div>
         <NavElement name="My Work" altName="Work" url="/#work" />
         <li id="navHome" className="hidden md:inline-block">
           <Link href="/">
