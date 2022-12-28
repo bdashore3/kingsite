@@ -11,7 +11,7 @@ export default function Home() {
           <b>Brian Dashore</b>
         </p>
         <p className="mt-8 text-whitesmoke text-lg lg:text-2xl">
-          Future physician. Hobbyist developer. Content Creator. Reinventing the wheel.
+          Future physician. Hobbyist developer. Eastern media enjoyer. Reinventing the wheel.
         </p>
       </div>
       <div className="flex w-full justify-center absolute bottom-0 mb-36 md:mb-8 lg:mb-16 text-center">

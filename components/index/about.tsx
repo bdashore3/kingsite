@@ -36,10 +36,13 @@ export default function About() {
           built my own custom kernel in 2018 using C. In February of 2020, I started programming
           bots using the Discord, Twitch, and Twitter APIs. These bots are semi-popular, and I have
           designed them with goals of educating the public and making my social media life easier.
+          Nowadays, I tend to work on applications for Apple products to make various functions on
+          their devices easier for the end user.
           <br />
           <br />
-          I feel that development ties well into medicine and learning multiple languages/principles
-          will allow me to succeed in future medical careers and possibly create my own software.
+          I feel that development ties well into medicine since learning multiple
+          languages/principles will allow me to succeed in future medical careers and possibly
+          create my own healthcare-oriented software.
           <br />
           <br />
           <span className="text-blue-400">Languages:</span>
@@ -50,8 +53,8 @@ export default function About() {
           <span className="text-blue-400">Have used:</span>
           <br />
           <span className="text-yellow-300">
-            SwiftUI, Discord bot API, Twitch API, Twitter bot API, React.js, Nextjs, Tailwind CSS,
-            Git
+            Unity, SwiftUI, Discord bot API, Twitch API, Twitter bot API, React.js, Nextjs, Tailwind
+            CSS, Git
           </span>
         </p>
       </div>
