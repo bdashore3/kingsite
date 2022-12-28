@@ -6,40 +6,35 @@
   .blog-post h4,
   .blog-post h5,
   .blog-post h6 {
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
-    align-self: center;
+    @apply self-center leading-none;
   }
   .blog-post h1,
   .blog-post h2,
   .blog-post h3 {
-    border-bottom: solid 2px whitesmoke;
+    @apply border-b-2 border-solid border-whitesmoke font-bold;
   }
   .blog-post h1 {
-    @apply text-2xl lg:text-5xl p-5;
+    @apply text-2xl lg:text-4xl;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
   }
   .blog-post h2 {
-    @apply text-xl lg:text-4xl p-5;
+    @apply text-xl lg:text-3xl;
     margin-top: 0.83em;
     margin-bottom: 0.83em;
   }
   .blog-post h3 {
-    @apply text-lg lg:text-3xl p-5;
+    @apply text-lg lg:text-2xl;
     margin-top: 1em;
     margin-bottom: 1em;
   }
   .blog-post h4 {
-    @apply text-base lg:text-2xl;
+    @apply text-base lg:text-xl;
     margin-top: 1.33em;
     margin-bottom: 1.33em;
   }
   .blog-post h5 {
-    @apply text-base lg:text-xl;
+    @apply text-base lg:text-lg;
     margin-top: 1.67em;
     margin-bottom: 1.67em;
   }
@@ -48,30 +43,21 @@
     margin-top: 2.33em;
     margin-bottom: 2.33em;
   }
+  .blog-post p,
   .blog-post blockquote {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-  .blog-post ul {
-    display: block;
-    list-style-type: disc;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 40px;
+    @apply not-last:mb-4 not-first:mt-4;
   }
   .blog-post ol {
-    display: block;
-    list-style-type: decimal;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 40px;
+    @apply list-decimal my-1 pl-10;
+  }
+  .blog-post ul {
+    @apply list-disc my-1 pl-10;
+  }
+  .blog-post blockquote {
+    @apply ml-5 pl-2 border-l-2 border-gray-400 border-solid;
+  }
+  .blog-post li > p {
+    @apply mb-4;
   }
   .blog-post a {
     @apply underline text-blue-300 visited:text-purple-400;

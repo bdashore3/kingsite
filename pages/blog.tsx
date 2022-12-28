@@ -1,15 +1,17 @@
 import Head from 'next/head';
 
-import BlogHome from '@/components/blog/home';
+//import BlogHome from '@/components/blog/home';
 import { Separator } from '@/components/utils/misc';
-import { sanity } from '@/lib/sanity';
-import { FullPost } from '@/models/schema';
+import { BlogPostType } from '@/models/Post';
+import { extractPost } from '@/lib/markdown';
+import BlogHome from '@/components/blog/home';
+import { getAllPostFiles } from '@/lib/github';
 
 interface Props {
-  posts: FullPost[];
+  allPosts: BlogPostType[];
 }
 
-export default function Blog({ posts }: Props) {
+export default function Blog({ allPosts }: Props) {
   return (
     <>
       <Head>
@@ -35,7 +37,7 @@ export default function Blog({ posts }: Props) {
       <div className="hidden md:block">
         <Separator />
       </div>
-      <BlogHome posts={posts} />
+      <BlogHome posts={allPosts} />
       <div className="md:hidden">
         <Separator />
       </div>
@@ -43,21 +45,32 @@ export default function Blog({ posts }: Props) {
   );
 }
 
+// Get all posts and synthesize their excerpts
 export async function getStaticProps() {
-  const posts = await sanity.fetch<FullPost[]>(
-    `*[_type == "post"] | order(publishedAt desc){
-      _id,
-      title,
-      publishedAt,
-      excerpt,
-      'slug': slug.current,
-      'author': author->{name, 'image': image.asset->url},
-    }`
-  );
+  const githubFiles = await getAllPostFiles();
+  const postPromises: Promise<BlogPostType>[] = [];
+
+  if (githubFiles.length > 0) {
+    githubFiles.forEach((file) => {
+      postPromises.push(extractPost(file, true));
+    });
+  }
+
+  const allPosts = (await Promise.allSettled(postPromises))
+    .filter((p) => p.status === 'fulfilled')
+    .map((p) => (p as PromiseFulfilledResult<BlogPostType>).value)
+    .sort((post1, post2) => {
+      if (post1.metadata.date === undefined || post2.metadata.date === undefined) {
+        return -1;
+      } else if (post1.metadata.date > post2.metadata.date) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+
   return {
-    props: {
-      posts: posts
-    },
+    props: { allPosts },
     revalidate: 1
   };
 }

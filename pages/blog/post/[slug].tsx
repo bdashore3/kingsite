@@ -2,13 +2,13 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import BlogPostContent from '@/components/blog/post';
-import { blockToString } from '@/components/utils/misc';
-import { sanity } from '@/lib/sanity';
-import { FullPost, Post } from '@/models/schema';
 import FourOhFour from '@/pages/404';
+import { extractPost } from '@/lib/markdown';
+import { BlogPostType } from '@/models/Post';
+import { getPostFile, getAllPostFiles } from '@/lib/github';
 
 interface Props {
-  post: FullPost;
+  post: BlogPostType;
 }
 
 export default function BlogPost({ post }: Props) {
@@ -27,22 +27,19 @@ export default function BlogPost({ post }: Props) {
       ) : (
         <>
           <Head>
-            <meta property="og:title" content={post.title} />
+            <meta property="og:title" content={post.metadata.title} />
             <meta property="og:type" content="website" />
-            <meta
-              property="og:url"
-              content={'https://kingbri.me/blog/post/' + post.slug?.current}
-            />
-            <meta property="og:description" content={blockToString(post.excerpt)} />
-            <meta name="Description" content={blockToString(post.excerpt)} />
+            <meta property="og:url" content={'https://kingbri.me/blog/post/' + post.slug} />
+            <meta property="og:description" content={post.metadata.excerpt} />
+            <meta name="Description" content={post.metadata.excerpt} />
             <meta name="theme-color" content="#ffd700" />
-            <title>{post.title}</title>
+            <title>{post.metadata.title}</title>
             <link
               href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway&display=swap"
               rel="stylesheet"
             />
           </Head>
-          <BlogPostContent postData={post} />
+          <BlogPostContent post={post} />
         </>
       )}
     </>
@@ -55,36 +52,29 @@ type Params = {
   };
 };
 
+// Grabs post from slug
 export async function getStaticProps({ params }: Params) {
-  const slug = params.slug;
-  const post = await sanity.fetch<FullPost>(
-    `*[_type == "post" && slug.current == $slug][0]{
-      title,
-      slug,
-      excerpt,
-      'author': author->{name, 'image': image.asset->url, 'bio': bio[]},
-      body
-    }`,
-    { slug }
-  );
+  const githubFile = await getPostFile(params.slug);
+  const post = await extractPost(githubFile);
 
   return {
     props: {
-      post: post || null
+      post: post
     },
     revalidate: 1
   };
 }
 
+// Grabs all slugs
 export async function getStaticPaths() {
-  const allPosts = await sanity.fetch(`*[_type == "post"]{ 'slug': slug.current }`);
+  const githubFiles = await getAllPostFiles();
+
   return {
-    paths:
-      allPosts?.map((post: Post) => ({
-        params: {
-          slug: post.slug
-        }
-      })) || [],
+    paths: githubFiles.map((file) => ({
+      params: {
+        slug: file.name.replace(/\.md$/, '')
+      }
+    })),
     fallback: true
   };
 }
