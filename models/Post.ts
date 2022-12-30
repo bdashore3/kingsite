@@ -1,8 +1,8 @@
 export type BlogPostType = {
   slug: string;
   metadata: BlogPostMetadata;
-  author: BlogPostAuthor;
-  content: string;
+  author?: BlogPostAuthor;
+  content?: string;
 };
 
 export type BlogPostMetadata = {

@@ -16,9 +16,13 @@ export async function extractPost(githubFile: GithubFile, metaOnly: boolean = fa
   const { data, content } = matter(fileContents);
   let post: BlogPostType = {
     slug: slug,
-    metadata: { ...data } as BlogPostMetadata,
+    metadata: {
+      title: data['title'],
+      date: data['date'] ? new Date(data['date']).toDateString() : undefined,
+      excerpt: data['excerpt']
+    },
     author: metaOnly ? { name: data['author'] } : await getAuthor(data['author']),
-    content: metaOnly ? '' : content
+    content: metaOnly ? undefined : content
   };
 
   // Done so NextJS doesn't complain about undefined

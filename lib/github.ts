@@ -4,7 +4,7 @@ const baseUrl = 'https://api.github.com/repos/bdashore3/kingsite-blog/contents';
 
 // Fetches all posts from Github API
 export async function getAllPostFiles(): Promise<GithubFile[]> {
-  const response = await fetch(`${baseUrl}/Posts`, {
+  const response = await fetch(`${baseUrl}/Posts/published`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
@@ -16,7 +16,7 @@ export async function getAllPostFiles(): Promise<GithubFile[]> {
 
 // Fetches a single post from Github API
 export async function getPostFile(slug: string): Promise<GithubFile> {
-  const response = await fetch(`${baseUrl}/Posts/${slug}.md`, {
+  const response = await fetch(`${baseUrl}/Posts/published/${slug}.md`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`

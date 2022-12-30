@@ -16,12 +16,8 @@ function BlogPostSummary({ post }: PostProps) {
         {post.metadata.excerpt && <p className="p-4">{post.metadata.excerpt}</p>}
         <hr />
         <div className="mt-1">
-          <p className="float-left">by {post.author.name ?? 'No author'}</p>
-          <p className="float-right">
-            {post.metadata.date == undefined
-              ? 'No date'
-              : new Date(post.metadata.date).toDateString()}
-          </p>
+          <p className="float-left">by {post.author?.name ?? 'No author'}</p>
+          <p className="float-right">{post.metadata.date ?? 'No date'}</p>
           <span className="clear-left block" />
         </div>
       </div>
