@@ -48,7 +48,7 @@ export default function Socials() {
           />
           <SocialButton
             name="discord"
-            url="https://discord.gg/pswt7by"
+            url="/discord"
             color="hover:text-blurple"
             svgPath={SocialImages.Discord}
           />

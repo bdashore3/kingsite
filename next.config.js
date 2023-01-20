@@ -15,6 +15,11 @@ module.exports = {
         source: '/work',
         destination: '/#work',
         permanent: true
+      },
+      {
+        source: '/discord',
+        destination: 'https://discord.gg/sYQxnuD7Fj',
+        permanent: true
       }
     ];
   }

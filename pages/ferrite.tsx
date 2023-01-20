@@ -44,7 +44,14 @@ export default function FerriteLanding() {
             A torrent searcher and debrid streamer for iOS.
           </p>
           <p className="mt-2 font-paragraph text-whitesmoke text-lg lg:text-2xl px-3 lg:px-0">
-            Join the <a href="https://discord.gg/sYQxnuD7Fj" target="_blank" className="text-blurple underline">Discord</a> for more information.
+            Join the{' '}
+            <a
+              href="https://discord.gg/sYQxnuD7Fj"
+              target="_blank"
+              className="text-blurple underline">
+              Discord
+            </a>{' '}
+            for more information.
           </p>
         </div>
         <div className="mt-8 lg:mt-12 mb-16 inline-flex flex-col justify-center items-center">
@@ -62,15 +69,13 @@ export default function FerriteLanding() {
             />
             <SocialButton
               name="discord"
-              url="https://discord.gg/sYQxnuD7Fj"
+              url="/discord"
               color="hover:text-blurple"
               svgPath={SocialImages.Discord}
             />
           </ul>
         </div>
-        <footer className="text-center max-w-screen">
-          © 2022 Brian Dashore
-        </footer>
+        <footer className="text-center max-w-screen">© 2022-present Brian Dashore</footer>
       </div>
     </>
   );
