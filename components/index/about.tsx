@@ -6,17 +6,16 @@ export default function About() {
       </h1>
       <div className="md:max-w-3xl xl:max-w-4xl rounded-xl relative bg-lightbg font-medium">
         <p className="text-whitesmoke px-6 lg:px-10 text-md lg:text-lg py-6 font-paragraph tracking-wide leading-spread">
-          My name is Brian Dashore, a self-taught hobbyist developer, and I am studying for a degree
-          in medicine. I am currently located in Long Island, New York.
+          My name is Brian Dashore, a student doctor and self-taught hobbyist developer. I am
+          currently in pursuit of my DO degree with a specialization in immunology.
           <br />
           <br />
           From sixth grade, I was interested in medicine and learning how the human body works. I’ve
           always had an inherent desire to help people since so many helped me when I suffered
           through chronic illness. I have spent many years over studying biology, anatomy,
-          nutrition, and other fields of medicine. Eventually, I was accepted to NYIT’s 7-year BS/DO
-          program in February of 2020. I am currently studying there and will obtain my DO in 7
-          years. From there, I am planning to study immunology and make a career/practice for
-          myself.
+          nutrition, and other fields of medicine. Eventually, I was accepted to a BS/DO program in
+          February of 2020 and have since matriculated into osteopathic medical school. From there,
+          I am planning to study immunology and make a career/practice for myself.
           <br />
           <br />I have presented in various conferences in Harvard Spaulding Hospital, Autism One,
           and the International Mold Congress for CEU credits. If you would like to know more about
@@ -30,14 +29,18 @@ export default function About() {
           </span>
           <br />
           <br />
-          My work as a developer started at age 15 where I learned how to program in Python and
-          created a small mario-kart 2d-game in processing.py. However, I lost interest in
-          programming due to a lack of project ideas. I stumbled upon the Android community and
-          built my own custom kernel in 2018 using C. In February of 2020, I started programming
-          bots using the Discord, Twitch, and Twitter APIs. These bots are semi-popular, and I have
-          designed them with goals of educating the public and making my social media life easier.
-          Nowadays, I tend to work on applications for Apple products to make various functions on
-          their devices easier for the end user.
+          On the developer side of things, I learned how to program in Python at age 15 and created
+          a small mario-kart 2d-game in processing.py. However, I lost interest in programming due
+          to a lack of project ideas. Eventually, I stumbled upon the Android community and built my
+          own custom kernel in 2018 using C. In February of 2020, I started programming bots using
+          the Discord, Twitch, and Twitter APIs. These bots are semi-popular, and I have designed
+          them with goals of educating the public and making my social media life easier. The same
+          principle applies to Apple applications that I created in to make various functions easier
+          on end-user iDevices.
+          <br />
+          <br />
+          Currently, I work with AI and have dipped my toes into subfields such as Stable Diffusion
+          and the use of LLMs for assistant related and character roleplay tasks.
           <br />
           <br />
           I feel that development ties well into medicine since learning multiple

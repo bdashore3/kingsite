@@ -52,6 +52,11 @@ export default function Work() {
           url="/asobi"
         />
         <WorkCard
+          name="SillyTavern"
+          description="Contributor to a frontend for various LLMs."
+          url="https://github.com/SillyTavern/SillyTavern"
+        />
+        <WorkCard
           name="RoyalGuard"
           description="Makes your discord administration experience simple and easy."
           url="https://github.com/bdashore3/RoyalGuard"
@@ -60,11 +65,6 @@ export default function Work() {
           name="CourtJester"
           description="A multipurpose bot which enhances your discord server experience."
           url="https://github.com/bdashore3/CourtJester"
-        />
-        <WorkCard
-          name="Tsūchi"
-          description="Reliable and cross-platform notifications for your ongoing mangas."
-          url="https://github.com/bdashore3/Tsuchi"
         />
       </div>
     </div>
